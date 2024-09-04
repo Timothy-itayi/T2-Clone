@@ -1,3 +1,4 @@
+
 .header-center{
 
     background-color: #121212;
@@ -49,4 +50,243 @@ position: relative;
 .navbar-header .navbar-toggler {
     font-size: 1.6em;
     width: auto;
+} 
+/* Global CSS */ 
+body {
+    font-family: HelveticaNowText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial,Noto Sans,sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Header Styles */
+.header-center {
+    display: flex;
+    
+    padding: 20px;
+    background-color: #121212;
+    border-bottom: 2px solid #c7c7c7;
+}
+
+.navbar-header-custom {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-header__hamburger {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 6px 3px;
+    color: #fff;
+    line-height: 1;
+    margin-right: 24px;
+}
+
+/* Text Styles */
+.my-class {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Slider Styles */
+/* .slider-full-width {
+    width: 100%;
+    overflow: visible;
+} */
+
+.swiper-container {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Background Image Styles */
+.background-image-container {
+    position: relative;
+    width: 100%;
+}
+
+.background-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Homepage Wrapper */
+.homepage-wrapper {
+    width: auto;
+}
+
+.image-wrapper-add-to-your-library-of-teaware{
+    position: absolute;
+    width: 100%
+
+}
+
+/* Image Wrapper */
+.image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Content Overlay */
+.content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+/* Text Styles for Content */
+.copyContent {
+    text-align: center;
+}
+
+.h4 {
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 700;
+    font-style: normal;
+    font-family: HelveticaNowDisplay, Dosis, sans-serif;
+}
+.p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.box-text {
+    font-size: 16px;
+}
+
+.text-dark {
+    color: #333;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.titleClass {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Button Container */
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Button Styles */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.cta-button {
+    font-size: 16px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.btn--primary-light {
+    background-color: #ffffff;
+  
+}
+
+.btn--primary-dark {
+    background-color: #ffffff;
+    color: #000000
+}
+.btn--secondary-dark {
+    border: 1px solid
+}
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .my-class {
+        font-size: 20px;
+    }
+
+    .titleClass {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .my-class {
+        font-size: 24px;
+    }
+
+    .titleClass {
+        font-size: 24px;
+    }
+}
+
+/* Additional Styles */
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+ 
+
+.homepage-wrapper.home-hero-short .content-overlay {
+    position: absolute;
+    height: 100%;
+    top: 0 !important;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
 }
