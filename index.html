@@ -98,7 +98,7 @@
                   <a href="/files/products.html" class="menu-link">Tea</a>
                 </li>
                 <li class="menu-item">
-                  <a href="/card.html" class="menu-link">Card</a>
+                  <a href="/files/card.html" class="menu-link">Card</a>
                 </li>
                 <li class="menu-item">
                   <a href="https://timothyitayi.com/" class="menu-link" target="_blank">CV</a>
@@ -165,8 +165,356 @@
   </div>
 </header>
     </header>
+    <style>
+      .romantic-gift-container {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      
+      @media (max-width: 991px) {
+        .romantic-gift-container {
+          max-width: 100%;
+        }
+      }
+      
+      .romantic-gift-wrapper {
+        position: relative;
+        display: flex;
+        width: 1060px;
+        max-width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      
+      .romantic-gift-content {
+        z-index: 0;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        overflow: hidden;
+        justify-content: flex-start;
+        padding: 236px 0 240px;
+      }
+      
+      @media (max-width: 991px) {
+        .romantic-gift-content {
+          max-width: 100%;
+          padding: 100px 0;
+        }
+      }
+      
+      .romantic-gift-image {
+        display: flex;
+        min-height: 24px;
+        padding-top: 4px;
+      }
+      
+      @media (max-width: 991px) {
+        .romantic-gift-image {
+          max-width: 100%;
+        }
+      }
+      
+      .romantic-gift-background {
+        position: absolute;
+        z-index: 0;
+        display: flex;
+        min-height: 500px;
+        width: 100%;
+        padding-right: 127px;
+        align-items: flex-start;
+        justify-content: center;
+        left: -128px;
+        right: 1px;
+        top: 0;
+        bottom: 0;
+      }
+      
+      @media (max-width: 991px) {
+        .romantic-gift-background {
+          padding-right: 20px;
+        }
+      }
+      
+      .romantic-gift-color-block {
+        background: var(--www-t-2-tea-com-citrine-white, #fbf3de);
+        align-self: flex-start;
+        position: absolute;
+        z-index: 0;
+        display: flex;
+        min-width: 240px;
+        width: 392px;
+        height: 500px;
+        left: 0;
+        bottom: 0;
+      }
+      
+      .romantic-gift-inner-wrapper {
+        z-index: 0;
+        display: flex;
+        min-width: 240px;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+        flex-basis: 0%;
+        max-width: 1680px;
+        padding: 24px 9px;
+      }
+      
+      @media (max-width: 991px) {
+        .romantic-gift-inner-wrapper {
+          max-width: 100%;
+        }
+      }
+      
+      .romantic-gift-flex-container {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        flex-wrap: wrap;
+        height: 100%;
+      }
+      
+      @media (max-width: 991px) {
+        .romantic-gift-flex-container {
+          max-width: 100%;
+        }
+      }
+      
+      .romantic-gift-content-wrapper {
+        align-self: stretch;
+        display: flex;
+        min-width: 240px;
+        min-height: 452px;
+        width: 100%;
+        max-width: 1042px;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+        flex-basis: 0%;
+        margin: auto 0;
+        padding: 0 15px;
+      }
+      
+      @media (max-width: 991px) {
+        .romantic-gift-content-wrapper {
+          max-width: 100%;
+        }
+      }
+      
+      .romantic-gift-text-container {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        flex: 1;
+        padding: 58px 0;
+      }
+      
+      @media (max-width: 991px) {
+        .romantic-gift-text-container {
+          max-width: 100%;
+        }
+      }
+      
+      .romantic-gift-info {
+        display: flex;
+        width: 340px;
+        max-width: 340px;
+        flex-direction: column;
+        justify-content: center;
+      }
+      
+      .romantic-gift-logo-wrapper {
+        display: flex;
+        width: 100%;
+        padding-bottom: 16px;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      
+      .romantic-gift-logo-container {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 20px 0 24px;
+      }
+      
+      .romantic-gift-logo {
+        display: flex;
+        height: 24px;
+        width: 250px;
+        max-width: 100%;
+        padding-top: 4px;
+        align-items: center;
+        overflow: hidden;
+        justify-content: flex-start;
+      }
+      
+      .romantic-gift-logo-image {
+        aspect-ratio: 3.68;
+        object-fit: contain;
+        object-position: center;
+        width: 250px;
+        align-self: stretch;
+        min-width: 240px;
+        margin: auto 0;
+      }
+      
+      .romantic-gift-title-wrapper {
+        display: flex;
+        width: 100%;
+        padding-bottom: 16px;
+        flex-direction: column;
+        color: var(--www-t-2-tea-com-black, #000);
+        justify-content: flex-start;
+        font: 700 40px/1.1 Dosis, sans-serif;
+      }
+      
+      .romantic-gift-description-wrapper {
+        display: flex;
+        width: 100%;
+        padding-bottom: 16px;
+        flex-direction: column;
+        color: var(--www-t-2-tea-com-black, #000);
+        justify-content: flex-start;
+        font: 400 16px/24px Roboto, sans-serif;
+      }
+      
+      .romantic-gift-cta-wrapper {
+        display: flex;
+        width: 100%;
+        padding-bottom: 8px;
+        flex-direction: column;
+        text-align: center;
+        justify-content: flex-start;
+        font: 500 16px/1 Roboto, sans-serif;
+      }
+      
+      .romantic-gift-cta-container {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      
+      .romantic-gift-primary-cta {
+        display: flex;
+        min-width: 258px;
+        min-height: 60px;
+        flex-direction: column;
+        align-items: flex-start;
+        color: var(--www-t-2-tea-com-white, #fff);
+        justify-content: flex-start;
+        padding: 0 16px 16px 0;
+      }
+      
+      .romantic-gift-primary-cta-button {
+        align-self: stretch;
+        border-radius: 4px;
+        background: var(--www-t-2-tea-com-cod-gray, #121212);
+        min-height: 44px;
+        padding: 12px 24px;
+      }
+      
+      @media (max-width: 991px) {
+        .romantic-gift-primary-cta-button {
+          padding: 0 20px;
+        }
+      }
+      
+      .romantic-gift-secondary-cta {
+        display: flex;
+        min-height: 60px;
+        flex-direction: column;
+        align-items: flex-start;
+        color: var(--www-t-2-tea-com-cod-gray, #121212);
+        justify-content: flex-start;
+        padding: 0 16px 16px 0;
+      }
+      
+      .romantic-gift-secondary-cta-button {
+        align-self: stretch;
+        border-radius: 4px;
+        border: 1px solid var(--www-t-2-tea-com-black-30, rgba(0, 0, 0, 0.3));
+        min-height: 44px;
+        padding: 12px 25px;
+      }
+      
+      @media (max-width: 991px) {
+        .romantic-gift-secondary-cta-button {
+          padding: 0 20px;
+        }
+      }
+      
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      </style>
+      
+      <section class="romantic-gift-container">
+        <div class="romantic-gift-wrapper">
+          <div class="romantic-gift-content">
+            <div class="romantic-gift-image" aria-hidden="true"></div>
+          </div>
+          <div class="romantic-gift-background">
+            <div class="romantic-gift-color-block"></div>
+            <div class="romantic-gift-inner-wrapper">
+              <div class="romantic-gift-flex-container">
+                <div class="romantic-gift-content-wrapper">
+                  <div class="romantic-gift-text-container">
+                    <div class="romantic-gift-info">
+                      <div class="romantic-gift-logo-wrapper">
+                        <div class="romantic-gift-logo-container">
+                          <div class="romantic-gift-logo">
+                            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/090939c6bd8911d25c2f8dc25890a4b7c05a770756b85d285d60387698617f69?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" class="romantic-gift-logo-image" alt="T2 Tea logo" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="romantic-gift-title-wrapper">
+                        <h2 class="romantic-gift-title">For the romantics</h2>
+                      </div>
+                      <div class="romantic-gift-description-wrapper">
+                        <p class="romantic-gift-description">You'll swoon over this gift pack, filled with tea, a mug and book.</p>
+                      </div>
+                      <div class="romantic-gift-cta-wrapper">
+                        <div class="romantic-gift-cta-container">
+                          <div class="romantic-gift-primary-cta">
+                            <a href="#" class="romantic-gift-primary-cta-button" role="button">Shop T2 x Penguin Books</a>
+                          </div>
+                          <div class="romantic-gift-secondary-cta">
+                            <a href="#" class="romantic-gift-secondary-cta-button" role="button">Shop now</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-   <div>
+   <!-- <div>
     <div class="slider-full-width">
         <div class="swiper-container content-asset-body swiper-container--custom-pagination swiper-container-initialized swiper-container-horizontal swiper-container-android">
         
@@ -273,8 +621,8 @@
         <h2 class="h4 mb-3 titleClass">Add to your library of teaware</h2>
         <p class="d-none d-md-block d-none d-md-block">Made with fine bone china and 24k gold details.</p>
         <div class="button-container d-flex">
-        <a href="/products.html" class="btn cta-button btn--primary-dark" aria-label="Shop Book Nooks">Shop Book Nooks</a>
-        <a href="/products.html" class="btn cta-button btn--secondary-dark" aria-label="Shop all teaware">Shop all teaware</a>
+        <a href="/files/products.html" class="btn cta-button btn--primary-dark" aria-label="Shop Book Nooks">Shop Book Nooks</a>
+        <a href="/files/products.html" class="btn cta-button btn--secondary-dark" aria-label="Shop all teaware">Shop all teaware</a>
         </div>
         </div>
         </div>
@@ -312,4 +660,148 @@
                                 </span>
                             </span></div>
         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-        </div> -
+        </div>  -->
+        <style>
+          .footer {
+            padding: 56px 0 0;
+            background: var(--www-t-2-tea-com-cod-gray, #121212);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          
+          .footer-container {
+            display: flex;
+            width: 100%;
+            max-width: 1662px;
+            padding-bottom: 140px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+          }
+          
+          .logo-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 141px;
+            padding-bottom: 48px;
+          }
+          
+          .logo-wrapper {
+            display: flex;
+            min-height: 84px;
+            max-width: 111px;
+            padding: 0 15px;
+          }
+          
+          .logo-link {
+            display: flex;
+            max-width: 63px;
+            padding: 4px 0 14px;
+          }
+          
+          .logo-image {
+            width: 63px;
+            aspect-ratio: 1.57;
+            object-fit: contain;
+          }
+          
+          .social-section {
+            align-self: flex-start;
+            display: flex;
+            flex-direction: column;
+            color: var(--www-t-2-tea-com-cod-gray, #121212);
+            text-align: center;
+            font: 400 16px/1 Roboto, sans-serif;
+          }
+          
+          .social-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-left: 16px;
+          }
+          
+          .github-icon {
+            width: 44px;
+            aspect-ratio: 1;
+            object-fit: contain;
+          }
+          
+          .github-link {
+            text-decoration: underline;
+            align-self: stretch;
+            border-radius: 4px;
+            background: var(--www-t-2-tea-com-white, #fff);
+            padding: 12px 16px;
+          }
+          
+          .links-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            color: var(--www-t-2-tea-com-white-90, rgba(255, 255, 255, 0.9));
+            font: 400 14px/1 Roboto, sans-serif;
+            padding: 0 0 45px 18px;
+          }
+          
+          .links-container {
+            display: flex;
+            flex-direction: column;
+            max-width: 125px;
+            padding-left: 15px;
+          }
+          
+          .footer-link {
+            text-decoration: underline;
+          }
+          
+          @media (max-width: 991px) {
+            .footer-container {
+              padding-bottom: 100px;
+            }
+          }
+          
+          .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+          }
+          </style>
+          
+          <footer class="footer">
+            <div class="footer-container">
+              <section class="logo-section">
+                <div class="logo-wrapper">
+                  <a href="/" class="logo-link">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/404d2deed9d61288b70fe6bfe107a820de683310e0b4ad27a61b91aebc3f4b14?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" class="logo-image" alt="Company logo" />
+                  </a>
+                </div>
+              </section>
+              <section class="social-section">
+                <div class="social-container">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/9d2923421b763abd3358e13f6ac53404f26d0fcaa511e49b2d35650f3a1c3fc2?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" class="github-icon" alt="GitHub icon" />
+                  <a href="https://github.com/Timothy-itayi" class="github-link" target="_blank" rel="noopener noreferrer">
+                    Follow me on GitHub
+                  </a>
+                </div>
+              </section>
+              <nav class="links-section">
+                <div class="links-container">
+                  <a href="https://timothyitayi.com/" class="footer-link" target="_blank" rel="noopener noreferrer">
+                    Contact Us
+                  </a>
+                  <a href="https://www.linkedin.com/in/timothy-itayi-ab8754138/" class="footer-link" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                  </a>
+                </div>
+              </nav>
+            </div>
+          </footer>
