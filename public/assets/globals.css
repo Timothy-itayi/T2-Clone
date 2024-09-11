@@ -263,7 +263,6 @@ body {
 
 .nav-menu {
   display: flex;
-
   width: 100%;
   align-items: center;
   height: 100%;
@@ -396,7 +395,7 @@ body {
     width: 25px;
     height: 3px;
     margin: 5px 0;
-    background-color: #000;
+    background-color: #ffffff;
   }
   
 
