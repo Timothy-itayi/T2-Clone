@@ -22,13 +22,7 @@
 </head>
 <body>
     <header>
-        <div class="header-center container-fluid">
-            <div class="row">
-                <div class="col">
-                   
-
-                </div>
-
+    
 <header class="header-border">
   <div class="header-container">
     <div class="header-inner">
@@ -40,18 +34,22 @@
             </a>
           </div>
         </div>
+        <div class="pull-left">
+
+
+       
             <!-- Hamburger Menu Button for Mobile -->
-            <div class="hamburger-menu">
+            <div class="hamburger-menu" aria-hidden="true">
               <span></span>
               <span></span>
               <span></span>
             </div>
-    
+          </div>
            
-        <div class="nav-wrapper">
+        <div class="nav-wrapper" id="nav-menu">
           <div class="nav-container">
             <div class="nav-inner">
-              <ul class="nav-menu">
+              <ul class="nav-menu" id="menu-list">
                 <li class="menu-item">
                   <a href="/files/products.html" class="menu-link">Tea</a>
                 </li>
@@ -101,18 +99,11 @@
             </a>
         </div>
         <div class="icon-wrapper">
-            <button class="language-selector" aria-label="Select Language">
-              <span class="flag-wrapper">
+         
+            
                 <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/70e629c2eb77cd7be438ad13cbcbcafd9ca1cac7136ad5181ad19925dd81de1c?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="United States Flag" class="flag-image" />
-              </span>
-              <span class="arrow-wrapper">
-                <span class="arrow-container">
-                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4c1ed28da3f23e4f0861154c505c03d2dbda65f2ff9527b4d158c8056757f9db?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" class="arrow-image" />
-                </span>
-              </span>
-            </button>
+   
           </div>
-        </div>
       </div>
     </div>
   </div>
@@ -162,7 +153,7 @@
           </div>
         </div>
       </section>
-
+      <script src="/public/js/main.js" defer></script>
    <!-- <div>
     <div class="slider-full-width">
         <div class="swiper-container content-asset-body swiper-container--custom-pagination swiper-container-initialized swiper-container-horizontal swiper-container-android">
