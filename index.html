@@ -9,6 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/globals.css">
+    <link rel="stylesheet" href="/assets/index.css">
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -24,60 +25,9 @@
         <div class="header-center container-fluid">
             <div class="row">
                 <div class="col">
-                    <div class="navbar-header navbar-header-custom">
-                        <div class="pull-left">
-                            <button class="navbar-header__hamburger navbar-toggler" type="button" aria-controls="so-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                                <i class="iconfont-hamburger" aria-hidden="false">
-
-                                </i>
-                            </button>
-
-                        </div>
-
-                    </div>
+                   
 
                 </div>
- <style>
-.header-border { border-bottom: 1px solid #c7c7c7; background-color: #121212; padding-top: 16px; }
-.header-container { display: flex; width: 100%; justify-content: center; flex-wrap: wrap; }
-.header-inner { display: flex; width: 100%; max-width: 1920px; flex-direction: column; align-items: center; padding: 0 115px; }
-.header-content { display: flex; width: 100%; max-width: 1690px; align-items: start; flex-wrap: wrap; padding: 0 29px; }
-.logo-wrapper { display: flex; min-height: 52px; align-items: center; padding: 10px 0; }
-.logo-container { width: 51px; }
-.logo-link { display: flex; justify-content: center; }
-.logo-image { aspect-ratio: 1.59; object-fit: contain; width: 51px; }
-.nav-wrapper { min-height: 68px; padding-left: 16px; color: rgba(255, 255, 255, 0.75); font: 500 16px/1 Roboto, sans-serif; }
-.nav-container { background-color: #121212; max-width: 319px; }
-.nav-inner { display: flex; min-width: 240px; width: 210px; padding-left: 15px; max-width: 349px; }
-.nav-menu { display: flex; align-items: center; height: 100%; }
-.menu-item { display: flex; min-height: 68px; }
-.menu-link { text-decoration: underline; border-radius: 4px 4px 0 0; padding: 16px 16px 32px; }
-.search-wrapper { display: flex; min-height: 52px; padding-left: 16px; }
-.search-container { display: flex; width: 100%; padding-left: 80px; align-items: center; flex-wrap: wrap; }
-.search-inner { display: flex; justify-content: start; padding: 14px 0; }
-.search-form { position: relative; width: 100%; max-width: 252px; }
-.search-input { border-radius: 8px; background-color: #333; min-height: 40px; width: 100%; color: rgba(255, 255, 255, 0.6); padding: 11px 40px 11px 16px; font: 400 16px Roboto, sans-serif; }
-.search-button { border-radius: 0 8px 8px 0; position: absolute; min-height: 40px; width: 44px; right: 0; bottom: 0; padding: 7px 13px; }
-.search-icon { width: 17px; }
-.icon-wrapper { display: flex; padding-left: 16px; }
-.icon-container { width: 24px; }
-.icon-link { display: flex; align-items: center; }
-.icon-image { aspect-ratio: 1; object-fit: contain; width: 100%; }
-.cart-icon { width: 20px; }
-.language-selector { display: flex; align-items: center; padding: 8px 0; }
-.flag-wrapper { padding-left: 24px; width: 48px; }
-.flag-image { aspect-ratio: 1; object-fit: contain; width: 24px; }
-.arrow-wrapper { min-height: 20px; padding-left: 4px; width: 24px; }
-.arrow-container { min-height: 20px; width: 20px; padding: 2px 6px; }
-.arrow-image { aspect-ratio: 0.5; object-fit: contain; width: 100%; }
-
-@media (max-width: 991px) {
-  .header-container, .header-inner, .header-content, .search-wrapper { max-width: 100%; }
-  .header-inner { padding: 0 20px; }
-  .header-content { padding: 0 20px; }
-  .search-input { padding-right: 20px; }
-}
-</style>
 
 <header class="header-border">
   <div class="header-container">
@@ -90,7 +40,15 @@
             </a>
           </div>
         </div>
-        <nav class="nav-wrapper">
+            <!-- Hamburger Menu Button for Mobile -->
+            <div class="hamburger-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+    
+           
+        <div class="nav-wrapper">
           <div class="nav-container">
             <div class="nav-inner">
               <ul class="nav-menu">
@@ -106,7 +64,7 @@
               </ul>
             </div>
           </div>
-        </nav>
+        </div>
         <div class="search-wrapper">
           <div class="search-container">
             <div class="search-inner">
@@ -120,34 +78,29 @@
             </div>
           </div>
         </div>
+
+        
+
+
+               <!-- Other Icons and Search -->
         <div class="icon-wrapper">
-          <div class="icon-container">
+
             <a href="#" class="icon-link">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/628808087b1b74ee9946b9b813b9ddb27bda876f8b53f8248fb2dd645cc4ac4a?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="User Account" class="icon-image" />
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/628808087b1b74ee9946b9b813b9ddb27bda876f8b53f8248fb2dd645cc4ac4a?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="User Account" class="Git" />
+            </a>  
+        </div>
+        <div class="icon-wrapper">
+         
+            <a href="#" class="icon-link" aria-label="find me">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aadb26632264dc6266bdcab973720ac5a5c79ffd25d7f8d30241dad6dd6fc176?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="Favorites" class="Git" />
             </a>
-          </div>
-        </div>
+     
         <div class="icon-wrapper">
-          <div class="icon-container">
-            <a href="#" class="icon-link">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aadb26632264dc6266bdcab973720ac5a5c79ffd25d7f8d30241dad6dd6fc176?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="Favorites" class="icon-image" />
-            </a>
-          </div>
-        </div>
-        <div class="icon-wrapper">
-          <a href="#" class="icon-link">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e181754ef7fd6004193ae20d348551de091919e7823664b0a42f9f81bdd0f3ec?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="Notifications" class="icon-image" />
-          </a>
-        </div>
-        <div class="icon-wrapper">
-          <div class="icon-container">
             <a href="#" class="icon-link" aria-label="Shopping Cart">
               <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/422f65046006825a6ee726b0ebca342d820aac571457c787a3df72e65145ae1b?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" class="cart-icon" />
             </a>
-          </div>
         </div>
         <div class="icon-wrapper">
-          <div class="icon-container">
             <button class="language-selector" aria-label="Select Language">
               <span class="flag-wrapper">
                 <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/70e629c2eb77cd7be438ad13cbcbcafd9ca1cac7136ad5181ad19925dd81de1c?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="United States Flag" class="flag-image" />
@@ -165,311 +118,7 @@
   </div>
 </header>
     </header>
-    <style>
-      .romantic-gift-container {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-      }
-      
-      @media (max-width: 991px) {
-        .romantic-gift-container {
-          max-width: 100%;
-        }
-      }
-      
-      .romantic-gift-wrapper {
-        position: relative;
-        display: flex;
-        width: 1060px;
-        max-width: 100%;
-        flex-direction: column;
-        justify-content: flex-start;
-      }
-      
-      .romantic-gift-content {
-        z-index: 0;
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        overflow: hidden;
-        justify-content: flex-start;
-        padding: 236px 0 240px;
-      }
-      
-      @media (max-width: 991px) {
-        .romantic-gift-content {
-          max-width: 100%;
-          padding: 100px 0;
-        }
-      }
-      
-      .romantic-gift-image {
-        display: flex;
-        min-height: 24px;
-        padding-top: 4px;
-      }
-      
-      @media (max-width: 991px) {
-        .romantic-gift-image {
-          max-width: 100%;
-        }
-      }
-      
-      .romantic-gift-background {
-        position: absolute;
-        z-index: 0;
-        display: flex;
-        min-height: 500px;
-        width: 100%;
-        padding-right: 127px;
-        align-items: flex-start;
-        justify-content: center;
-        left: -128px;
-        right: 1px;
-        top: 0;
-        bottom: 0;
-      }
-      
-      @media (max-width: 991px) {
-        .romantic-gift-background {
-          padding-right: 20px;
-        }
-      }
-      
-      .romantic-gift-color-block {
-        background: var(--www-t-2-tea-com-citrine-white, #fbf3de);
-        align-self: flex-start;
-        position: absolute;
-        z-index: 0;
-        display: flex;
-        min-width: 240px;
-        width: 392px;
-        height: 500px;
-        left: 0;
-        bottom: 0;
-      }
-      
-      .romantic-gift-inner-wrapper {
-        z-index: 0;
-        display: flex;
-        min-width: 240px;
-        width: 100%;
-        flex-direction: column;
-        justify-content: center;
-        flex: 1;
-        flex-basis: 0%;
-        max-width: 1680px;
-        padding: 24px 9px;
-      }
-      
-      @media (max-width: 991px) {
-        .romantic-gift-inner-wrapper {
-          max-width: 100%;
-        }
-      }
-      
-      .romantic-gift-flex-container {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        flex: 1;
-        flex-wrap: wrap;
-        height: 100%;
-      }
-      
-      @media (max-width: 991px) {
-        .romantic-gift-flex-container {
-          max-width: 100%;
-        }
-      }
-      
-      .romantic-gift-content-wrapper {
-        align-self: stretch;
-        display: flex;
-        min-width: 240px;
-        min-height: 452px;
-        width: 100%;
-        max-width: 1042px;
-        flex-direction: column;
-        justify-content: center;
-        flex: 1;
-        flex-basis: 0%;
-        margin: auto 0;
-        padding: 0 15px;
-      }
-      
-      @media (max-width: 991px) {
-        .romantic-gift-content-wrapper {
-          max-width: 100%;
-        }
-      }
-      
-      .romantic-gift-text-container {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        flex: 1;
-        padding: 58px 0;
-      }
-      
-      @media (max-width: 991px) {
-        .romantic-gift-text-container {
-          max-width: 100%;
-        }
-      }
-      
-      .romantic-gift-info {
-        display: flex;
-        width: 340px;
-        max-width: 340px;
-        flex-direction: column;
-        justify-content: center;
-      }
-      
-      .romantic-gift-logo-wrapper {
-        display: flex;
-        width: 100%;
-        padding-bottom: 16px;
-        flex-direction: column;
-        justify-content: flex-start;
-      }
-      
-      .romantic-gift-logo-container {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: 20px 0 24px;
-      }
-      
-      .romantic-gift-logo {
-        display: flex;
-        height: 24px;
-        width: 250px;
-        max-width: 100%;
-        padding-top: 4px;
-        align-items: center;
-        overflow: hidden;
-        justify-content: flex-start;
-      }
-      
-      .romantic-gift-logo-image {
-        aspect-ratio: 3.68;
-        object-fit: contain;
-        object-position: center;
-        width: 250px;
-        align-self: stretch;
-        min-width: 240px;
-        margin: auto 0;
-      }
-      
-      .romantic-gift-title-wrapper {
-        display: flex;
-        width: 100%;
-        padding-bottom: 16px;
-        flex-direction: column;
-        color: var(--www-t-2-tea-com-black, #000);
-        justify-content: flex-start;
-        font: 700 40px/1.1 Dosis, sans-serif;
-      }
-      
-      .romantic-gift-description-wrapper {
-        display: flex;
-        width: 100%;
-        padding-bottom: 16px;
-        flex-direction: column;
-        color: var(--www-t-2-tea-com-black, #000);
-        justify-content: flex-start;
-        font: 400 16px/24px Roboto, sans-serif;
-      }
-      
-      .romantic-gift-cta-wrapper {
-        display: flex;
-        width: 100%;
-        padding-bottom: 8px;
-        flex-direction: column;
-        text-align: center;
-        justify-content: flex-start;
-        font: 500 16px/1 Roboto, sans-serif;
-      }
-      
-      .romantic-gift-cta-container {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-      }
-      
-      .romantic-gift-primary-cta {
-        display: flex;
-        min-width: 258px;
-        min-height: 60px;
-        flex-direction: column;
-        align-items: flex-start;
-        color: var(--www-t-2-tea-com-white, #fff);
-        justify-content: flex-start;
-        padding: 0 16px 16px 0;
-      }
-      
-      .romantic-gift-primary-cta-button {
-        align-self: stretch;
-        border-radius: 4px;
-        background: var(--www-t-2-tea-com-cod-gray, #121212);
-        min-height: 44px;
-        padding: 12px 24px;
-      }
-      
-      @media (max-width: 991px) {
-        .romantic-gift-primary-cta-button {
-          padding: 0 20px;
-        }
-      }
-      
-      .romantic-gift-secondary-cta {
-        display: flex;
-        min-height: 60px;
-        flex-direction: column;
-        align-items: flex-start;
-        color: var(--www-t-2-tea-com-cod-gray, #121212);
-        justify-content: flex-start;
-        padding: 0 16px 16px 0;
-      }
-      
-      .romantic-gift-secondary-cta-button {
-        align-self: stretch;
-        border-radius: 4px;
-        border: 1px solid var(--www-t-2-tea-com-black-30, rgba(0, 0, 0, 0.3));
-        min-height: 44px;
-        padding: 12px 25px;
-      }
-      
-      @media (max-width: 991px) {
-        .romantic-gift-secondary-cta-button {
-          padding: 0 20px;
-        }
-      }
-      
-      .visually-hidden {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-      }
-      </style>
-      
+   
       <section class="romantic-gift-container">
         <div class="romantic-gift-wrapper">
           <div class="romantic-gift-content">
@@ -661,120 +310,7 @@
                             </span></div>
         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
         </div>  -->
-        <style>
-          .footer {
-            padding: 56px 0 0;
-            background: var(--www-t-2-tea-com-cod-gray, #121212);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-          }
-          
-          .footer-container {
-            display: flex;
-            width: 100%;
-            max-width: 1662px;
-            padding-bottom: 140px;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-          }
-          
-          .logo-section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-height: 141px;
-            padding-bottom: 48px;
-          }
-          
-          .logo-wrapper {
-            display: flex;
-            min-height: 84px;
-            max-width: 111px;
-            padding: 0 15px;
-          }
-          
-          .logo-link {
-            display: flex;
-            max-width: 63px;
-            padding: 4px 0 14px;
-          }
-          
-          .logo-image {
-            width: 63px;
-            aspect-ratio: 1.57;
-            object-fit: contain;
-          }
-          
-          .social-section {
-            align-self: flex-start;
-            display: flex;
-            flex-direction: column;
-            color: var(--www-t-2-tea-com-cod-gray, #121212);
-            text-align: center;
-            font: 400 16px/1 Roboto, sans-serif;
-          }
-          
-          .social-container {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding-left: 16px;
-          }
-          
-          .github-icon {
-            width: 44px;
-            aspect-ratio: 1;
-            object-fit: contain;
-          }
-          
-          .github-link {
-            text-decoration: underline;
-            align-self: stretch;
-            border-radius: 4px;
-            background: var(--www-t-2-tea-com-white, #fff);
-            padding: 12px 16px;
-          }
-          
-          .links-section {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            color: var(--www-t-2-tea-com-white-90, rgba(255, 255, 255, 0.9));
-            font: 400 14px/1 Roboto, sans-serif;
-            padding: 0 0 45px 18px;
-          }
-          
-          .links-container {
-            display: flex;
-            flex-direction: column;
-            max-width: 125px;
-            padding-left: 15px;
-          }
-          
-          .footer-link {
-            text-decoration: underline;
-          }
-          
-          @media (max-width: 991px) {
-            .footer-container {
-              padding-bottom: 100px;
-            }
-          }
-          
-          .visually-hidden {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-          }
-          </style>
+  
           
           <footer class="footer">
             <div class="footer-container">
