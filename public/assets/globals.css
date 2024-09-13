@@ -250,7 +250,6 @@ body {
     padding: 6px 3px;
     border: none;
     color: #fff;
-    line-height: 1;
     font-size: .75em;
     margin-right: 24px;
 }
@@ -272,9 +271,23 @@ body {
   min-height: 68px;
 }
 .menu-link {
-  text-decoration: underline;
+  font-family: 'HelveticaNowTextBold';
   border-radius: 4px 4px 0 0;
+  color: hsla(0, 0%, 100%, .75);
   padding: 16px 16px 32px;
+  border-radius: 4px 4px 0 0;
+  text-decoration: none;
+}
+
+
+.dropdown-toggle {
+  white-space: nowrap;
+}
+
+@font-face {
+  font-family: 'HelveticaNowTextBold';
+  src: url(/fonts/helvetica-now/helveticanowtext-bold-demo.ttf);
+
 }
 .search-wrapper {
   flex-grow: 1; /* Allow search and icons to grow */
@@ -446,6 +459,7 @@ body {
   padding: 4px 0 14px;
 }
 
+
 .logo-image {
   width: 63px;
   aspect-ratio: 1.57;
@@ -475,7 +489,7 @@ body {
 }
 
 .github-link {
-  text-decoration: underline;
+  
   align-self: stretch;
   border-radius: 4px;
   background: var(--www-t-2-tea-com-white, #fff);
@@ -499,7 +513,7 @@ body {
 }
 
 .footer-link {
-  text-decoration: underline;
+
 }
 
 @media (max-width: 991px) {
