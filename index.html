@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/globals.css">
     <link rel="stylesheet" href="/assets/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -23,7 +24,7 @@
 <body>
     <header>
     
-<header class="header-border">
+<div class="header-border">
   <div class="header-container">
     <div class="header-inner">
       <div class="header-content">
@@ -34,36 +35,47 @@
             </a>
           </div>
         </div>
-        <div class="pull-left">
+
 
 
        
-            <!-- Hamburger Menu Button for Mobile -->
-            <div class="hamburger-menu" aria-hidden="true">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-           
-        <div class="nav-wrapper" id="nav-menu">
-          <div class="nav-container">
-            <div class="nav-inner">
-              <ul class="nav-menu" id="menu-list">
-                <li class="menu-item">
-                  <a href="/files/products.html" class="menu-link">Tea</a>
-                </li>
-                <li class="menu-item">
-                  <a href="/files/card.html" class="menu-link">Card</a>
-                </li>
-                <a href="https://timothyitayi.com/" id="resume" class="menu-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0" style="color: null" data-discover-heading="Explore">CV</a>
-                <!-- <li class="menu-item">
-                  <a href="https://timothyitayi.com/" class="menu-link" target="_blank">CV</a>
-                </li> -->
-              </ul>
-            </div>
+         
+            
+    
+          
+         
+        
+        <div class="nav-container">
+          <div class="nav-inner">
+            <!-- Checkbox to toggle the menu -->
+            <input type="checkbox" id="check" />
+        
+            <!-- Hamburger Menu Button for Mobile (appears initially) -->
+            <label for="check" class="open-menu-item">
+              <i class="fas fa-bars"></i>
+            </label>
+        
+            <!-- Close Menu Button (appears when menu is open) -->
+            <label for="check" class="close-menu-item">
+              <i class="fas fa-times"></i>
+            </label>
+        
+            <!-- Navigation Menu -->
+            <ul class="nav-menu" id="menu-list">
+              <li class="menu-item">
+                <a href="/files/products.html" class="menu-link">Tea</a>
+              </li>
+              <li class="menu-item">
+                <a href="/files/card.html" class="menu-link">Card</a>
+              </li>
+              <li class="menu-item">
+                <a href="https://timothyitayi.com/" class="menu-link" target="_blank">CV</a>
+              </li> 
+            </ul>
           </div>
         </div>
+        
+
         <div class="search-wrapper">
           <div class="search-container">
             <div class="search-inner">
@@ -108,7 +120,7 @@
       </div>
     </div>
   </div>
-</header>
+  </div>
     </header>
    
       <section class="romantic-gift-container">
