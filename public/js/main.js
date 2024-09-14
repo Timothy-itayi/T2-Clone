@@ -18,43 +18,21 @@
 //     };
 
 
-    document.addEventListener("DOMContentLoaded", function() {
-        const menuList = document.getElementById("menu-list");
-      
-        // Define your menu items
-        const menuItems = [
-          { href: '/files/products.html', text: 'Tea' },
-          { href: '/files/card.html', text: 'Card' },
-          { href: 'https://timothyitayi.com/', text: 'CV', target: '_blank' }
-        ];
-      
-        // Function to create menu items
-        function createMenuItem(href, text, target = '') {
-          const li = document.createElement('li');
-          li.classList.add('menu-item');
-          
-          const a = document.createElement('a');
-          a.href = href;
-          a.classList.add('menu-link');
-          a.textContent = text;
-          
-          if (target) {
-            a.target = target;
-          }
-          
-          li.appendChild(a);
-          return li;
-        }
-      
-        // Add menu items to the menu list
-        menuItems.forEach(item => {
-          menuList.appendChild(createMenuItem(item.href, item.text, item.target));
-        });
-      
-        // Toggle menu visibility
-        document.getElementById("hamburger-button").addEventListener("click", function() {
-          const navMenu = document.getElementById("nav-menu");
-          navMenu.classList.toggle("active");
-        });
-      });
-      
+// var burgerMenu = document.getElementById('burger-menu');
+
+// var overlay = document.getElementById('menu-list');
+
+// burgerMenu.addEventListener('click', function() {
+//   this.classList.toggle("close");
+//   overlay.classList.toggle("overlay");
+// });
+
+/* Set the width of the side navigation to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}

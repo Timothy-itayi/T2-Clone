@@ -1,158 +1,189 @@
-
-
-
- <!DOCTYPE html>
-
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/globals.css">
-    <link rel="stylesheet" href="/assets/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/globals.css" />
+    <link rel="stylesheet" href="/assets/index.css" />
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
-  
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <title>T2 Clone</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-    
-<div class="header-border">
-  <div class="header-container">
-    <div class="header-inner">
-      <div class="header-content">
-        <div class="logo-wrapper">
-          <div class="logo-container">
-            <a href="/" class="logo-link">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/642556b94912ff5578382984c1ccfba7e4df16bfd84558e1d0be97ff56a94326?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="Company Logo" class="logo-image" />
-            </a>
-          </div>
-        </div>
+      <div class="header-border">
+        <div class="header-container">
+          <div class="header-inner">
+            <div class="header-content">
+              <div class="logo-wrapper">
+                <div class="logo-container">
+                  <a href="/" class="logo-link">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/642556b94912ff5578382984c1ccfba7e4df16bfd84558e1d0be97ff56a94326?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591"
+                      alt="Company Logo"
+                      class="logo-image"
+                    />
+                  </a>
+                </div>
+              </div>
 
-
-
-       
-         
+              <div class="nav-container">
+                <div class="nav-inner">
             
-    
-          
-         
-        
-        <div class="nav-container">
-          <div class="nav-inner">
-            <!-- Checkbox to toggle the menu -->
-            <input type="checkbox" id="check" />
-        
-            <!-- Hamburger Menu Button for Mobile (appears initially) -->
-            <label for="check" class="open-menu-item">
-              <i class="fas fa-bars"></i>
-            </label>
-        
-            <!-- Close Menu Button (appears when menu is open) -->
-            <label for="check" class="close-menu-item">
-              <i class="fas fa-times"></i>
-            </label>
-        
-            <!-- Navigation Menu -->
-            <ul class="nav-menu" id="menu-list">
-              <li class="menu-item">
-                <a href="/files/products.html" class="menu-link">Tea</a>
-              </li>
-              <li class="menu-item">
-                <a href="/files/card.html" class="menu-link">Card</a>
-              </li>
-              <li class="menu-item">
-                <a href="https://timothyitayi.com/" class="menu-link" target="_blank">CV</a>
-              </li> 
-            </ul>
-          </div>
-        </div>
-        
 
-        <div class="search-wrapper">
-          <div class="search-container">
-            <div class="search-inner">
-              <form class="search-form" role="search">
-                <label for="search-input" class="visually-hidden">Find products and articles</label>
-                <input type="search" id="search-input" class="search-input" placeholder="Find products and articles" />
-                <button type="submit" class="search-button">
-                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9c0cfee276f1180b469092fb2adee13080525e4ce6771d19c69e6d8756566b1b?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="Search" class="search-icon" />
-                </button>
-              </form>
+                  
+
+                    <!-- Navigation Menu -->
+                    <ul class="nav-menu" id="menu-list">
+                      <li class="menu-item">
+                        <a href="/files/products.html" class="menu-link">Tea</a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="/files/card.html" class="menu-link">Card</a>
+                      </li>
+                      <li class="menu-item">
+                        <a
+                          href="https://timothyitayi.com/"
+                          class="menu-link"
+                          target="_blank"
+                          >CV</a
+                        >
+                      </li>
+                    </ul>
+                    <div id="burger-menu" onclick="openNav()" >
+                      <span class="burger-menu-icon">&#9776;</span>
+                      >
+                  </div>
+                </div>
+
+                <!-- Side Navigation Menu (hidden by default) -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/files/products.html">Tea</a>
+  <a href="/files/card.html">Card</a>
+  <a href="https://timothyitayi.com/" target="_blank">CV</a>
+</div>
+
+                <div class="search-wrapper">
+                  <div class="search-container">
+                    <div class="search-inner">
+                      <form class="search-form" role="search">
+                        <label for="search-input" class="visually-hidden"
+                          >Find products and articles</label
+                        >
+                        <input
+                          type="search"
+                          id="search-input"
+                          class="search-input"
+                          placeholder="Find products and articles"
+                        />
+                        <button type="submit" class="search-button">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/9c0cfee276f1180b469092fb2adee13080525e4ce6771d19c69e6d8756566b1b?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591"
+                            alt="Search"
+                            class="search-icon"
+                          />
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Other Icons and Search -->
+                <div class="icon-wrapper">
+                  <a href="#" class="icon-link">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/628808087b1b74ee9946b9b813b9ddb27bda876f8b53f8248fb2dd645cc4ac4a?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591"
+                      alt="User Account"
+                      class="Git"
+                    />
+                  </a>
+                </div>
+                <div class="icon-wrapper">
+                  <a href="#" class="icon-link" aria-label="find me">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/aadb26632264dc6266bdcab973720ac5a5c79ffd25d7f8d30241dad6dd6fc176?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591"
+                      alt="Favorites"
+                      class="Git"
+                    />
+                  </a>
+
+                  <div class="icon-wrapper">
+                    <a href="#" class="icon-link" aria-label="Shopping Cart">
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/422f65046006825a6ee726b0ebca342d820aac571457c787a3df72e65145ae1b?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591"
+                        alt=""
+                        class="cart-icon"
+                      />
+                    </a>
+                  </div>
+                  <div class="icon-wrapper">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/70e629c2eb77cd7be438ad13cbcbcafd9ca1cac7136ad5181ad19925dd81de1c?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591"
+                      alt="United States Flag"
+                      class="flag-image"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        
-
-
-               <!-- Other Icons and Search -->
-        <div class="icon-wrapper">
-
-            <a href="#" class="icon-link">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/628808087b1b74ee9946b9b813b9ddb27bda876f8b53f8248fb2dd645cc4ac4a?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="User Account" class="Git" />
-            </a>  
-        </div>
-        <div class="icon-wrapper">
-         
-            <a href="#" class="icon-link" aria-label="find me">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aadb26632264dc6266bdcab973720ac5a5c79ffd25d7f8d30241dad6dd6fc176?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="Favorites" class="Git" />
-            </a>
-     
-        <div class="icon-wrapper">
-            <a href="#" class="icon-link" aria-label="Shopping Cart">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/422f65046006825a6ee726b0ebca342d820aac571457c787a3df72e65145ae1b?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" class="cart-icon" />
-            </a>
-        </div>
-        <div class="icon-wrapper">
-         
-            
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/70e629c2eb77cd7be438ad13cbcbcafd9ca1cac7136ad5181ad19925dd81de1c?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="United States Flag" class="flag-image" />
-   
-          </div>
-      </div>
-    </div>
-  </div>
-  </div>
-    </header>
-   
-      <section class="romantic-gift-container">
-        <div class="romantic-gift-wrapper">
-          <div class="romantic-gift-content">
-            <div class="romantic-gift-image" aria-hidden="true"></div>
-          </div>
-          <div class="romantic-gift-background">
-            <div class="romantic-gift-color-block"></div>
-            <div class="romantic-gift-inner-wrapper">
-              <div class="romantic-gift-flex-container">
-                <div class="romantic-gift-content-wrapper">
-                  <div class="romantic-gift-text-container">
-                    <div class="romantic-gift-info">
-                      <div class="romantic-gift-logo-wrapper">
-                        <div class="romantic-gift-logo-container">
-                      
-                        </div>
-                      </div>
-                      <div class="romantic-gift-title-wrapper">
-                        <h2 class="romantic-gift-title">For the romantics</h2>
-                      </div>
-                      <div class="romantic-gift-description-wrapper">
-                        <p class="romantic-gift-description">You'll swoon over this gift pack, filled with tea, a mug and book.</p>
-                      </div>
-                      <div class="romantic-gift-cta-wrapper">
-                        <div class="romantic-gift-cta-container">
-                          <div class="romantic-gift-primary-cta">
-                            <a href="#" class="romantic-gift-primary-cta-button" role="button">Shop T2 x Penguin Books</a>
+          <section class="romantic-gift-container">
+            <div class="romantic-gift-wrapper">
+              <div class="romantic-gift-content">
+                <div class="romantic-gift-image" aria-hidden="true"></div>
+              </div>
+              <div class="romantic-gift-background">
+                <div class="romantic-gift-color-block"></div>
+                <div class="romantic-gift-inner-wrapper">
+                  <div class="romantic-gift-flex-container">
+                    <div class="romantic-gift-content-wrapper">
+                      <div class="romantic-gift-text-container">
+                        <div class="romantic-gift-info">
+                          <div class="romantic-gift-logo-wrapper">
+                            <div class="romantic-gift-logo-container"></div>
                           </div>
-                          <div class="romantic-gift-secondary-cta">
-                            <a href="#" class="romantic-gift-secondary-cta-button" role="button">Shop now</a>
+                          <div class="romantic-gift-title-wrapper">
+                            <h2 class="romantic-gift-title">
+                              For the romantics
+                            </h2>
+                          </div>
+                          <div class="romantic-gift-description-wrapper">
+                            <p class="romantic-gift-description">
+                              You'll swoon over this gift pack, filled with tea,
+                              a mug and book.
+                            </p>
+                          </div>
+                          <div class="romantic-gift-cta-wrapper">
+                            <div class="romantic-gift-cta-container">
+                              <div class="romantic-gift-primary-cta">
+                                <a
+                                  href="#"
+                                  class="romantic-gift-primary-cta-button"
+                                  role="button"
+                                  >Shop T2 x Penguin Books</a
+                                >
+                              </div>
+                              <div class="romantic-gift-secondary-cta">
+                                <a
+                                  href="#"
+                                  class="romantic-gift-secondary-cta-button"
+                                  role="button"
+                                  >Shop now</a
+                                >
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -161,11 +192,9 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <script src="/public/js/main.js" defer></script>
-   <!-- <div>
+          </section>
+          <script src="/js/main.js"></script>
+          <!-- <div>
     <div class="slider-full-width">
         <div class="swiper-container content-asset-body swiper-container--custom-pagination swiper-container-initialized swiper-container-horizontal swiper-container-android">
         
@@ -313,34 +342,63 @@
                             </span></div>
         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
         </div>  -->
-  
-          
+
           <footer class="footer">
             <div class="footer-container">
               <section class="logo-section">
                 <div class="logo-wrapper">
                   <a href="/" class="logo-link">
-                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/404d2deed9d61288b70fe6bfe107a820de683310e0b4ad27a61b91aebc3f4b14?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" class="logo-image" alt="Company logo" />
+                    <img
+                      loading="lazy"
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/404d2deed9d61288b70fe6bfe107a820de683310e0b4ad27a61b91aebc3f4b14?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591"
+                      class="logo-image"
+                      alt="Company logo"
+                    />
                   </a>
                 </div>
               </section>
               <section class="social-section">
                 <div class="social-container">
-                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/9d2923421b763abd3358e13f6ac53404f26d0fcaa511e49b2d35650f3a1c3fc2?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" class="github-icon" alt="GitHub icon" />
-                  <a href="https://github.com/Timothy-itayi" class="github-link" target="_blank" rel="noopener noreferrer">
+                  <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/9d2923421b763abd3358e13f6ac53404f26d0fcaa511e49b2d35650f3a1c3fc2?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591"
+                    class="github-icon"
+                    alt="GitHub icon"
+                  />
+                  <a
+                    href="https://github.com/Timothy-itayi"
+                    class="github-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Follow me on GitHub
                   </a>
                 </div>
               </section>
               <nav class="links-section">
                 <div class="links-container">
-                  <a href="https://timothyitayi.com/" class="footer-link" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://timothyitayi.com/"
+                    class="footer-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Contact Us
                   </a>
-                  <a href="https://www.linkedin.com/in/timothy-itayi-ab8754138/" class="footer-link" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://www.linkedin.com/in/timothy-itayi-ab8754138/"
+                    class="footer-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     LinkedIn
                   </a>
                 </div>
               </nav>
             </div>
           </footer>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
