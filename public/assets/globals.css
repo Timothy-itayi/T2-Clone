@@ -195,9 +195,9 @@ body {
 
 .header-container {
   display: flex;
+  justify-content: flex-start;
   width: 100%;
-  justify-content: flex-start;/* Ensure content is spaced out */
-  flex-wrap: wrap;
+  
  
 
   
@@ -232,17 +232,11 @@ body {
 .nav-container {
   background-color: #121212;
   min-height: 68px;
-  padding-left: 16px;
+ 
   display:flex;
-  justify-content: space-between; 
+ justify-content: stretch;
 }
-.nav-bar-header{
-    padding: 6px 3px;
-    border: none;
-    color: #fff;
-    font-size: .75em;
-    margin-right: 24px;
-}
+
 
 .nav-inner {
   display: flex;
@@ -375,6 +369,7 @@ body {
 
 }
 
+
 .search-wrapper{
 
   position: relative;
@@ -472,7 +467,7 @@ body {
   text-align: center;
   gap: 50px;
   position: relative;
-  justify-content: space-between;
+ 
 }
 .icon-link {
   display: flex;
