@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/assets/globals.css" />
   <link rel="stylesheet" href="/assets/index.css" />
+  <link rel="stylesheet" href="/assets/card.css" />
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -15,6 +16,12 @@
   />
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+
+
+</head>
 
 </head>
 <body>
@@ -73,751 +80,113 @@
             </div>
       
         </header>
-    <style>
-        .product-details {
-          display: flex;
-          flex-direction: column;
-          justify-content: start;
-        }
-        
-        .container {
-          display: flex;
-          width: 100%;
-          justify-content: center;
-          flex-wrap: wrap;
-        }
-        
-        .breadcrumb {
-          display: flex;
-          min-width: 240px;
-          width: 100%;
-          max-width: 1854px;
-          flex-direction: column;
-          align-items: center;
-          justify-content: start;
-          flex: 1;
-          flex-basis: 0%;
-          padding: 16px 255px 0;
-        }
-        
-        .breadcrumb-list {
-          display: flex;
-          width: 100%;
-          max-width: 1344px;
-          justify-content: start;
-          flex-wrap: wrap;
-        }
-        
-        .breadcrumb-item {
-          display: flex;
-          flex-direction: column;
-          color: rgba(0, 0, 0, 0.6);
-          white-space: nowrap;
-          justify-content: start;
-          padding: 3px 0 1px;
-          font: 500 10px/1.6 Roboto, sans-serif;
-        }
-        
-        .breadcrumb-link {
-          display: flex;
-          align-items: center;
-          gap: 4px;
-          justify-content: start;
-          height: 100%;
-          padding: 3px 0 1px 6px;
-        }
-        
-        .breadcrumb-icon {
-          align-self: stretch;
-          display: flex;
-          padding-right: 6px;
-          align-items: start;
-          justify-content: start;
-          width: 13px;
-          margin: auto 0;
-        }
-        
-        .breadcrumb-text {
-          align-self: stretch;
-          color: rgba(0, 0, 0, 0.6);
-          white-space: nowrap;
-          margin: auto 0;
-          font: 500 10px/1.6 Roboto, sans-serif;
-        }
-        
-        .product-gallery {
-          display: flex;
-          min-width: 240px;
-          align-items: start;
-          justify-content: space-between;
-          flex-wrap: wrap;
-          flex: 1;
-          flex-basis: 113px;
-        }
-        
-        .gallery-sidebar {
-          display: flex;
-          padding-top: 16px;
-          flex-direction: column;
-          justify-content: center;
-          flex: 1;
-          flex-basis: 0%;
-        }
-        
-        .gallery-main {
-          display: flex;
-          min-width: 240px;
-          padding-top: 16px;
-          flex-direction: column;
-          align-items: center;
-          color: #fff;
-          text-align: center;
-          justify-content: start;
-          width: 618px;
-          max-width: 618px;
-          font: 500 16px/1 Roboto, sans-serif;
-        }
-        
-        .gallery-image {
-          aspect-ratio: 0.24;
-          object-fit: contain;
-          object-position: center;
-          width: 100%;
-        }
-        
-        .gallery-button {
-          border-radius: 4px;
-          background-color: #121212;
-          padding: 12px 24px;
-          margin-top: 48px;
-        }
-        
-        .product-info {
-          display: flex;
-          min-width: 240px;
-          flex-direction: column;
-          align-items: start;
-          width: 612px;
-          max-width: 612px;
-          padding: 16px 80px 68px 33px;
-        }
-        
-        .product-type {
-          display: flex;
-          width: 100%;
-          gap: 8px;
-          color: rgba(0, 0, 0, 0.9);
-          padding: 2px 0;
-          font: 400 12px/1 Roboto, sans-serif;
-        }
-        
-        .product-title {
-          margin-top: 4px;
-          width: 100%;
-          color: #121212;
-          font: 700 32px/36px Dosis, sans-serif;
-        }
-        
-        .product-rating {
-          display: flex;
-          margin-top: 4px;
-          width: 100%;
-          padding-top: 1px;
-          flex-direction: column;
-          align-items: start;
-          justify-content: start;
-        }
-        
-        .rating-stars {
-          align-self: stretch;
-          z-index: 0;
-          display: flex;
-          padding-right: 8px;
-          align-items: center;
-          overflow: hidden;
-          justify-content: start;
-          margin: auto 0;
-        }
-        
-        .rating-value {
-          text-decoration-line: underline;
-          align-self: stretch;
-          color: rgba(0, 0, 0, 0.9);
-          white-space: nowrap;
-          margin: auto 0;
-          font: 500 12px/1 Roboto, sans-serif;
-        }
-        
-        .rating-count {
-          align-self: stretch;
-          z-index: 0;
-          display: flex;
-          padding-left: 4px;
-          align-items: center;
-          color: rgba(0, 0, 0, 0.9);
-          white-space: nowrap;
-          justify-content: start;
-          margin: auto 0;
-          font: 500 12px/1 Roboto, sans-serif;
-        }
-        
-        .review-button {
-          display: flex;
-          padding-right: 32px;
-          align-items: center;
-          color: rgba(0, 0, 0, 0.9);
-          justify-content: start;
-          height: 100%;
-          font: 500 12px/1 Roboto, sans-serif;
-        }
-        
-        .product-description {
-          display: flex;
-          color: rgba(0, 0, 0, 0.75);
-          justify-content: center;
-          flex-wrap: wrap;
-          margin: 18px 0 0 15px;
-          font: 400 14px/20px Roboto, sans-serif;
-        }
-        
-        .product-options {
-          display: flex;
-          margin-top: 17px;
-          padding-bottom: 24px;
-          justify-content: center;
-          flex-wrap: wrap;
-        }
-        
-        .option-container {
-          display: flex;
-          min-width: 240px;
-          width: 100%;
-          max-width: 480px;
-          flex-direction: column;
-          justify-content: start;
-          flex: 1;
-          flex-basis: 0%;
-          padding: 0 15px;
-        }
-        
-        .option-title {
-          width: 100%;
-          color: rgba(0, 0, 0, 0.9);
-          letter-spacing: -0.05px;
-          font: 500 16px/1 Roboto, sans-serif;
-        }
-        
-        .option-buttons {
-          align-self: center;
-          display: flex;
-          margin-top: 6px;
-          width: 100%;
-          justify-content: start;
-        }
-        
-        .option-button {
-          border-radius: 4px;
-          border: 1px solid #c7c7c7;
-          background-color: #fff;
-          display: flex;
-          min-height: 40px;
-          width: 100%;
-          gap: 7px;
-          padding: 12px 44px;
-        }
-        
-        .option-button-selected {
-          border-radius: 4px;
-          border: 1px solid #121212;
-          background-color: #fff;
-          display: flex;
-          min-height: 40px;
-          width: 100%;
-          gap: 20px;
-          justify-content: space-between;
-          padding: 8px 5px 8px 44px;
-        }
-        
-        .quantity-selector {
-          display: flex;
-          width: 100%;
-          gap: 20px;
-          justify-content: space-between;
-        }
-        
-        .quantity-label {
-          color: rgba(0, 0, 0, 0.9);
-          white-space: nowrap;
-          letter-spacing: -0.3px;
-          margin: auto 0;
-          font: 500 16px/1 Roboto, sans-serif;
-        }
-        
-        .quantity-controls {
-          display: flex;
-        }
-        
-        .quantity-button {
-          align-items: center;
-          border-radius: 4px 0 0 4px;
-          border: 1px solid #e6e6e6;
-          z-index: 10;
-          display: flex;
-          min-height: 40px;
-          flex-direction: column;
-          justify-content: center;
-          padding: 10px 12px 10px 13px;
-        }
-        
-        .quantity-input {
-          border: 1px solid #e6e6e6;
-          background-color: #fff;
-          display: flex;
-          min-height: 40px;
-          flex-direction: column;
-          color: rgba(0, 0, 0, 0.9);
-          white-space: nowrap;
-          text-align: center;
-          justify-content: center;
-          padding: 11px 9px;
-          font: 400 16px Roboto, sans-serif;
-        }
-        
-        .add-to-cart-container {
-          display: flex;
-          padding-right: 15px;
-          color: #fff;
-          text-align: center;
-          justify-content: center;
-          flex-wrap: wrap;
-          font: 500 16px/1 Roboto, sans-serif;
-        }
-        
-        .add-to-cart-button {
-          align-items: center;
-          border-radius: 4px;
-          background-color: #121212;
-          position: relative;
-          display: flex;
-          width: 100%;
-          flex-direction: column;
-          justify-content: start;
-          padding: 12px 183px;
-        }
-        
-        .wishlist-button {
-          border-radius: 4px;
-          display: flex;
-          width: 100%;
-          align-items: center;
-          gap: 4px;
-          justify-content: center;
-          padding: 6px 160px;
-        }
-        
-        .afterpay-info {
-          display: flex;
-          gap: 29px;
-          color: #212529;
-          font-weight: 400;
-          margin: 8px 0 0 15px;
-        }
-        
-        .afterpay-text {
-          flex-grow: 1;
-          flex-basis: auto;
-          margin: auto 0;
-          font: 16px/1.8 Roboto, sans-serif;
-        }
-        
-        .afterpay-logo {
-          display: flex;
-          gap: 5px;
-          white-space: nowrap;
-          text-align: center;
-          font: 13px Inter, sans-serif;
-        }
-        
-        .features {
-          display: flex;
-          width: 450px;
-          max-width: 100%;
-          flex-direction: column;
-          overflow: hidden;
-          justify-content: start;
-          margin: 61px 0 0 15px;
-        }
-        
-        .features-title {
-          width: 100%;
-          color: rgba(0, 0, 0, 0.9);
-          white-space: nowrap;
-          letter-spacing: -0.3px;
-          font: 500 16px/1 Roboto, sans-serif;
-        }
-        
-        .features-list {
-          align-self: center;
-          display: flex;
-          margin-top: 16px;
-          width: 100%;
-          max-width: 474px;
-          flex-direction: column;
-        }
-        
-        .feature-item {
-          display: flex;
-          min-height: 24px;
-          align-items: start;
-          justify-content: start;
-          flex: 1;
-          padding: 0 12px;
-        }
-        
-        .feature-icon {
-          display: flex;
-          padding-right: 12px;
-          flex-direction: column;
-          align-items: start;
-          justify-content: start;
-          width: 36px;
-          max-width: 36px;
-        }
-        
-        .feature-text {
-          padding-top: 2px;
-          color: rgba(0, 0, 0, 0.9);
-          white-space: nowrap;
-          font: 400 14px/1 Roboto, sans-serif;
-        }
-        
-        .product-details-section {
-          padding-bottom: 1px;
-          border-bottom: 1px solid #d6d6d6;
-          display: flex;
-          width: 450px;
-          max-width: 100%;
-          flex-direction: column;
-          justify-content: start;
-          margin: 24px 0 0 15px;
-        }
-        
-        .details-button {
-          position: relative;
-          display: flex;
-          width: 100%;
-          flex-direction: column;
-          justify-content: center;
-          padding: 12px 29px 12px 1px;
-        }
-        
-        .details-title {
-          color: rgba(0, 0, 0, 0.9);
-          z-index: 0;
-          font: 500 16px/1 Dosis, sans-serif;
-        }
-        
-        .details-content {
-          display: flex;
-          width: 100%;
-          flex-direction: column;
-          font-family: Roboto, sans-serif;
-          font-weight: 400;
-          justify-content: start;
-        }
-        
-        .details-text {
-          display: flex;
-          width: 100%;
-          flex-direction: column;
-          font-size: 16px;
-          color: #212529;
-          justify-content: start;
-        }
-        
-        .details-list {
-          display: flex;
-          margin-top: 16px;
-          width: 100%;
-          padding-left: 40px;
-          flex-direction: column;
-          justify-content: start;
-        }
-        
-        .details-item {
-          width: 100%;
-          line-height: 24px;
-        }
-        
-        .details-footer {
-          margin-top: 16px;
-          width: 100%;
-          line-height: 24px;
-        }
-        
-        .product-sku {
-          margin-top: 14px;
-          width: 100%;
-          font-size: 14px;
-          color: rgba(0, 0, 0, 0.6);
-          line-height: 1;
-        }
-        
-        .accordion-button {
-          justify-content: center;
-          border: 1px solid #d6d6d6;
-          position: relative;
-          display: flex;
-          width: 100%;
-          flex-direction: column;
-          padding: 27px 29px 12px 1px;
-        }
-        
-        .accordion-title {
-          color: rgba(0, 0, 0, 0.9);
-          z-index: 0;
-          font: 500 16px/1 Dosis, sans-serif;
-        }
-        
-        .accordion-icon {
-          position: absolute;
-          z-index: 0;
-          display: flex;
-          width: 24px;
-          flex-direction: column;
-          justify-content: start;
-          right: 1px;
-          top: 12px;
-          bottom: 9px;
-        }
-        
-        @media (max-width: 991px) {
-          .container {
-            max-width: 100%;
-          }
-        
-          .breadcrumb {
-            max-width: 100%;
-            padding: 0 20px;
-          }
-        
-          .breadcrumb-list {
-            max-width: 100%;
-          }
-        
-          .breadcrumb-item {
-            white-space: initial;
-          }
-        
-          .breadcrumb-text {
-            white-space: initial;
-          }
-        
-          .product-gallery {
-            max-width: 100%;
-          }
-        
-          .gallery-sidebar {
-            display: none;
-          }
-        
-          .gallery-main {
-            max-width: 100%;
-          }
-        
-          .gallery-image {
-            max-width: 100%;
-          }
-        
-          .gallery-button {
-            padding: 0 20px;
-          }
-        
-          .product-info {
-            max-width: 100%;
-            padding: 0 20px;
-          }
-        
-          .product-type {
-            max-width: 100%;
-          }
-        
-          .product-title {
-            max-width: 100%;
-          }
-        
-          .product-rating {
-            max-width: 100%;
-          }
-        
-          .rating-value,
-          .rating-count {
-            white-space: initial;
-          }
-        
-          .product-description {
-            max-width: 100%;
-          }
-        
-          .option-container {
-            max-width: 100%;
-          }
-        
-          .option-title {
-            max-width: 100%;
-          }
-        
-          .option-button,
-          .option-button-selected {
-            padding: 0 20px;
-          }
-        
-          .quantity-label {
-            white-space: initial;
-          }
-        
-          .quantity-input {
-            white-space: initial;
-          }
-        
-          .add-to-cart-button {
-            max-width: 100%;
-            padding: 0 20px;
-          }
-        
-          .wishlist-button {
-            max-width: 100%;
-            padding: 0 20px;
-          }
-        
-          .afterpay-logo {
-            white-space: initial;
-          }
-        
-          .features {
-            margin-top: 40px;
-          }
-        
-          .features-title {
-            max-width: 100%;
-            white-space: initial;
-          }
-        
-          .features-list {
-            max-width: 100%;
-          }
-        
-          .feature-text {
-            white-space: initial;
-          }
-        
-          .product-details-section {
-            max-width: 100%;
-          }
-        
-          .details-button {
-            max-width: 100%;
-            padding-right: 20px;
-          }
-        
-          .details-content {
-            max-width: 100%;
-          }
-        
-          .details-text {
-            max-width: 100%;
-          }
-        
-          .details-list {
-            max-width: 100%;
-            padding-left: 20px;
-          }
-        
-          .details-footer {
-            max-width: 100%;
-          }
-        
-          .product-sku {
-            max-width: 100%;
-          }
-        
-          .accordion-button {
-            max-width: 100%;
-            padding-right: 20px;
-          }
-        }
-        
-        .visually-hidden {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          margin: -1px;
-          padding: 0;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-        </style>
+    
         
         <section class="product-details">
-          <nav class="breadcrumb" aria-label="Breadcrumb">
-            <ol class="breadcrumb-list">
-              <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Home</a></li>
-              <li class="breadcrumb-item">
-                <a href="#" class="breadcrumb-link">
-                  <span class="breadcrumb-icon"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/77030c839b126a1b14aa91b1662ac11bac2f21dfdf3eb9fcc3c1d03f3fc9225b?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true"></span>
-                  <span class="breadcrumb-text">Tea</span>
-                </a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="#" class="breadcrumb-link">
-                  <span class="breadcrumb-icon"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/176a29ce434d65f9b2a4fc3d1a1e58a8358224ffcb5d9defbb760aa115c3947e?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true"></span>
-                  <span class="breadcrumb-text">Shop By Tea</span>
-                </a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="#" class="breadcrumb-link">
-                  <span class="breadcrumb-icon"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e0044864568a6e3b40a6ef48049aa06a0aefecc313d3b0118b74eb8e9c5691c?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true"></span>
-                  <span class="breadcrumb-text">Black Tea</span>
-                </a>
-              </li>
-              <li class="breadcrumb-item">
-                <span class="breadcrumb-icon"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/79af0200d7c625f5b273cce0f93cca5facfef87ca59486fc826c015ee03b6706?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true"></span>
-                <span class="breadcrumb-text">Melbourne Breakfast Tea Bag Cube 25 pack</span>
-              </li>
-            </ol>
-          </nav>
+          <section class="carousel">
+
+            <div class="carousel_container">
         
-          <div class="container">
-            <div class="product-gallery">
-              <aside class="gallery-sidebar">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9864339b4341cb54fa1a9c6511e5d3fde506bf88019784ca3146e5531fadb9d?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="Tea product thumbnail" class="gallery-image">
-              </aside>
-              <div class="gallery-main">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a1e9f188e1bbe255d1631b016719d973c8ae1d3a1e2ffac0d47174c07efe4d7e?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="Melbourne Breakfast Tea Bag Cube" class="gallery-image">
-                <button class="gallery-button">see more images</button>
-              </div>
+          
+        <ul class="carousel_navigation">
+          <li><a href="#slide_1">
+              <img 
+                  loading="lazy" 
+                  src="/assets/Teas/melbourne_breakfast_100g_cube_tea.jpeg" 
+                  class="navigation_image" 
+                  alt="Melbourne Breakfast Cube Tea" 
+              />
+          </a></li>
+          <li><a href="#slide_2">
+              <img 
+                  loading="lazy" 
+                  src="/assets/Teas/melbourne_breakfast_100g_back.jpeg" 
+                  class="navigation_image" 
+                  alt="Melbourne Breakfast Back" 
+              />
+          </a></li>
+          <li><a href="#slide_3">
+              <img 
+                  loading="lazy" 
+                  src="/assets/Teas/melbourne_breakfast_100g_detail.jpeg" 
+                  class="navigation_image" 
+                  alt="Melbourne Breakfast Detail" 
+              />
+          </a></li>
+      </ul>
+      <div class="carousel">
+        <div class="carousel_slides">
+            <div class="carousel_slide" id="slide_1">
+                <div class="carousel_image_container">
+                    <img loading="lazy" src="/assets/Teas/melbourne_breakfast_100g_cube_tea.jpeg" class="carousel_image" alt="Melbourne Breakfast Cube Tea" />
+                </div>
+            </div>
+    
+            <div class="carousel_slide" id="slide_2">
+                <div class="carousel_image_container">
+                    <img loading="lazy" src="/assets/Teas/melbourne_breakfast_100g_back.jpeg" class="carousel_image" alt="Melbourne Breakfast Back" />
+                </div>
+            </div>
+    
+            <div class="carousel_slide" id="slide_3">
+                <div class="carousel_image_container">
+                    <img loading="lazy" src="/assets/Teas/melbourne_breakfast_100g_detail.jpeg" class="carousel_image" alt="Melbourne Breakfast Detail" />
+                </div>
+            </div>
+        </div>
+    </div>
             </div>
         
+        </section>
+      
+        
+<!--     
+          <div class="gallery">
+            <ul class="cards">
+           
+                <a>
+                  <img 
+                    loading="lazy" 
+                    src="/assets/Teas/melbourne_breakfast_100g_cube_tea.jpeg" 
+                    class="product-image " 
+                    alt="Default image" 
+                  />
+               
+                </a>
+                <a>
+                  <img 
+                    loading="lazy" 
+                    src="/assets/Teas/melbourne_breakfast_100g_back.jpeg" 
+                    class="product-image " 
+                    alt="Default image" 
+                  />
+               
+                </a>
+                <a>
+                  <img 
+                    loading="lazy" 
+                    src="/assets/Teas/melbourne_breakfast_100g_detail.jpeg" 
+                    class="product-image " 
+                    alt="Default image" 
+                  />
+               
+                </a>
+          </div>
+     -->
+  
+      
+            <div class="product-gallery">
+          
+         
+             
+
             <div class="product-info">
               <div class="product-type">
                 <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ecaf66043902c43861258fafee534ad95c28ea2df6066bcbda88a67600a73ab2?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
                 <span>Tea Bag</span>
               </div>
               <h1 class="product-title">Melbourne Breakfast Tea Bag Cube 25 pack</h1>
-              <div class="product-rating">
-                <div class="rating-stars" aria-hidden="true">
-                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/29056339b846417c4093a9f969b14be40737f7a3a3c2fd42869cb71892d17315?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="">
-                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/29056339b846417c4093a9f969b14be40737f7a3a3c2fd42869cb71892d17315?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="">
-                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/29056339b846417c4093a9f969b14be40737f7a3a3c2fd42869cb71892d17315?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="">
-                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/29056339b846417c4093a9f969b14be40737f7a3a3c2fd42869cb71892d17315?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="">
-                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0ebff8be3739048d74eff43a9959062a6dd53f3692e738ec35217ca18debf932?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="">
-                </div>
-                <span class="rating-value" aria-label="4.7 out of 5 stars">4.7</span>
-                <span class="rating-count">(907 reviews)</span>
-                <button class="review-button">Write a review</button>
-              </div>
+         
         
               <p class="product-description">
                 Indulge and sip a smooth blend of bold, malty black tea and rich velvety vanilla.
@@ -831,154 +200,65 @@
                       <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e2a624924eda7768ca2591411ecda032cbf0ca624a068caca5cec65c359c8377?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
                       Loose Leaf
                     </button>
-                    <button class="option-button-selected">
+                    <button class="option-button">
                       <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a1c538977a215ffbafe067a01f71a829fc2c3be06ba1fea4bb91facb172b9673?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
                       Tea Bag
-                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4b21fdff1ac4d62fe0c1d21291a0f0243f321c75d4f0389da6ac1eff4c9d3211?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
+                      <!-- <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4b21fdff1ac4d62fe0c1d21291a0f0243f321c75d4f0389da6ac1eff4c9d3211?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true"> -->
                     </button>
                   </div>
                 </div>
               </div>
         
-              <div class="product-options">
-                <div class="option-container">
-                  <h2 class="option-title">Choose a Size</h2>
-                  <div class="option-buttons">
-                    <button class="option-button-selected">
-                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/83c373369587f40c08d9c75d3510c2f0133c98a86350112a11636d2170f41663?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
-                      <div>
-                        <span>Cube</span>
-                        <span>25pk</span>
-                      </div>
-                      <span>$20 AUD</span>
-                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4b01c6d41191a918011749de478565d44bfb486574fa07746e04690542cefd0f?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
-                    </button>
-                    <button class="option-button">
-                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/392a66f12fe4a21acf6b780eb1d93b3c5d5e463b177250d4a32a43a920746561?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
-                      <div>
-                        <span>Foil</span>
-                        <span>60pk</span>
-                      </div>
-                      <span>$46 AUD</span>
-                    </button>
-                    <button class="option-button">
-                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c61c098613ad5bdee5331cf21116b442e08ac4179565f8c71b6f8038e3f273d6?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
-                      <div>
-                        <span>Tin</span>
-                        <span>60pk</span>
-                      </div>
-                      <span>$53 AUD</span>
-                    </button>
-                    <button class="option-button">
-                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0890033d983c7b7572ece0dbf675496e1a05b8c62a0033eed58255ff2c2c32ab?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
-                      <div>
-                        <span>Tin</span>
-                        <span>25pk</span>
-                      </div>
-                      <span>$30 AUD</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
+           
+    
         
-              <div class="quantity-selector">
-                <label for="quantity" class="quantity-label">Quantity</label>
-                <div class="quantity-controls">
-                  <button class="quantity-button" aria-label="Decrease quantity">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a2cfa021c5d11e4e68a32f77648154de9514deb796c98e4c231945f513002bbe?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
-                  </button>
-                  <input type="number" id="quantity" class="quantity-input" value="1" min="1" aria-label="Quantity">
-                  <button class="quantity-button" aria-label="Increase quantity">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a2cfa021c5d11e4e68a32f77648154de9514deb796c98e4c231945f513002bbe?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
-                  </button>
-                </div>
-              </div>
+       
+             
         
-              <div class="add-to-cart-container">
-                <button class="add-to-cart-button">
-                  Add to cart
-                  <span>$20 AUD</span>
-                </button>
-              </div>
-        
-              <button class="wishlist-button">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f6ee96ac226df63d994d03928bbd61f9f3856292a3cb670d6b72c161a9f3066d?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
-                Add to wishlist
-              </button>
-        
-              <div class="afterpay-info">
-                <p class="afterpay-text">or 4 interest-free payments of $5.00 with</p>
-                <div class="afterpay-logo">
-                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/55ecc33510001487b4af584ae4511882570c6e2e0f19f3efb7072ce97000787f?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="Afterpay logo">
-                  <button aria-label="Learn more about Afterpay">ⓘ</button>
-                </div>
-              </div>
-        
-              <div class="features">
-                <h2 class="features-title">Features</h2>
-                <ul class="features-list">
-                  <li class="feature-item">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4ff955acf190c5915d881faa26bb67e9a9d3e0359993bd72d7987eab1b942d68?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" class="feature-icon" aria-hidden="true">
-                    <span class="feature-text">Black</span>
-                  </li>
-                  <li class="feature-item">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2cfce0bd027c8e4a2261852dce87c3a734864525a433f4930fc3158d89ea991f?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" class="feature-icon" aria-hidden="true">
-                    <span class="feature-text">Morning</span>
-                  </li>
-                  <li class="feature-item">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0d47df888434c5f58c1f8cdc21fe866558732cc6b58ec510daa4bdf1ecfee3f1?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" class="feature-icon" aria-hidden="true">
-                    <span class="feature-text">Energy</span>
-                  </li>
-                </ul>
-              </div>
         
               <div class="product-details-section">
-                <button class="details-button" aria-expanded="false" aria-controls="description-content">
-                  <h2 class="details-title">Description</h2>
-                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e0305a044ce999898ec6e549148c5627659f05f7ca4bcb0ebc2ce01fb832ef9b?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
-                </button>
-                <div id="description-content" class="details-content" hidden>
-                  <div class="details-text">
-                    <p>When the winds start howling, this brew will see you through. Indulge a little with this full-bodied vanilla sweet tea – bound to keep you cosy all year 'round. Sip it up Melbourne style!</p>
-                    <ul class="details-list">
-                      <li class="details-item">Smooth, sweet vanilla and bold black tea.</li>
-                      <li class="details-item">This tea is sealed fresh inside a compostable plastic bag packed into a colourful recyclable cardboard box. Store in a cool, dry place.</li>
-                      <li class="details-item">A feel-good cup that would be perfect as a hot tea for that morning tea moment, or a relaxing tea for an afternoon pick-me-up.</li>
-                      <li class="details-item">Best brewed 2-4 minutes using freshly boiled water. Perfect on its own or with a dash of milk.</li>
-                    </ul>
-                    <p class="details-footer">From fruits to spices, tea leaves to herb bushes, 100% of our tea is sustainably sourced. Our teabags are made from food-grade corn starch –they are compostable, too.</p>
-                    <p>Dimensions: 8.5cm x 8.5cm x 8.5cm</p>
+                <!-- Description -->
+              
+              
+                  
+                  <section class="product-description-container">
+                    <p class="product-description">Description</p>
+                    <div class="icon-container">
+                      <div class="icon-wrapper">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e9b9afd968a00ccd5dc58dd124e0340593d3cc0fdd30b4c912413c199170d6d?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" class="icon" alt="" />
+                      </div>
+                      <div id="ingredients-content" class="details-content" hidden>
+               
+                    </div>
+                  </section>
+              
+                <!-- Ingredients -->
+                <section class="product-description-container">
+                  <p class="product-description">Ingredients</p>
+                  <div class="icon-container">
+                    <div class="icon-wrapper">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e9b9afd968a00ccd5dc58dd124e0340593d3cc0fdd30b4c912413c199170d6d?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" class="icon" alt="" />
+                    </div>
+                    <div id="ingredients-content" class="details-content" hidden>
+             
                   </div>
-                  <p class="product-sku">SKU: B125AE019</p>
-                </div>
+                </section>
+              
+                <!-- Brewing guide -->
+                <section class="product-description-container">
+                  <p class="product-description">Brewing Guide</p>
+                  <div class="icon-container">
+                    <div class="icon-wrapper">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e9b9afd968a00ccd5dc58dd124e0340593d3cc0fdd30b4c912413c199170d6d?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" class="icon" alt="" />
+                    </div>
+                    <div id="ingredients-content" class="details-content" hidden>
+             
+                  </div>
+                </section>
               </div>
-        
-              <button class="accordion-button" aria-expanded="false" aria-controls="ingredients-content">
-                <h2 class="accordion-title">Ingredients</h2>
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/990ae42673005b3598b846c40ca655b32edd3007105797813f9530f0e54d534f?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" class="accordion-icon" aria-hidden="true">
-              </button>
-              <div id="ingredients-content" hidden></div>
-        
-              <button class="accordion-button" aria-expanded="false" aria-controls="brewing-guide-content">
-                <h2 class="accordion-title">Brewing guide</h2>
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/990ae42673005b3598b846c40ca655b32edd3007105797813f9530f0e54d534f?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" class="accordion-icon" aria-hidden="true">
-              </button>
-              <div id="brewing-guide-content" hidden></div>
-        
-              <button class="accordion-button" aria-expanded="false" aria-controls="delivery-returns-content">
-                <h2 class="accordion-title">Delivery & returns</h2>
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/990ae42673005b3598b846c40ca655b32edd3007105797813f9530f0e54d534f?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" class="accordion-icon" aria-hidden="true">
-              </button>
-              <div id="delivery-returns-content" hidden></div>
-        
-              <button class="accordion-button" aria-expanded="false" aria-controls="reviews-content">
-                <h2 class="accordion-title">Reviews (907)</h2>
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/990ae42673005b3598b846c40ca655b32edd3007105797813f9530f0e54d534f?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" class="accordion-icon" aria-hidden="true">
-              </button>
-              <div id="reviews-content" hidden></div>
-            </div>
-          </div>
+         
         </section>
+        <script src="/js/main.js"></script>
 </body>
        
 <footer class="footer">
