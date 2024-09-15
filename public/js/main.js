@@ -65,6 +65,8 @@ buttons.forEach(button => {
   });
 });
 
+
+
 (function () {
   "use strict";
 
@@ -128,3 +130,37 @@ buttons.forEach(button => {
   // Initialize sliders
   vertical_slider.init();
 }());
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Function to adjust slide height based on the image size
+const adjustSlideHeights = () => {
+  const slides = gsap.utils.toArray('.carousel_slide');
+  slides.forEach(slide => {
+    const img = slide.querySelector('img');
+    if (img) {
+      img.onload = () => {
+        slide.style.height = `${img.clientHeight}px`;
+      };
+      // For images already loaded
+      if (img.complete) {
+        slide.style.height = `${img.clientHeight}px`;
+      }
+    }
+  });
+};
+
+// Call the function to set initial heights
+adjustSlideHeights();
+
+// Create a ScrollTrigger instance to manage smooth scrolling
+ScrollTrigger.create({
+  trigger: '.carousel',
+  start: 'top top',
+  end: () => `+=${document.querySelector('.carousel_slides').scrollHeight}`, // Scroll end position
+  scrub: 1, // Smooth scrolling
+  pin: true, // Pin the `.carousel` container in place
+  markers: true // Optional: for debugging purposes
+});

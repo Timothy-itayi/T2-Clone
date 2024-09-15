@@ -5,6 +5,12 @@
   justify-content: start;
 } */
 
+.body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling of the entire page */
+}
+
 .container {
   display: flex;
   width: 100%;
@@ -753,14 +759,20 @@
 
 
 
-
+.carousel{
+  padding-left: 10px;
+  padding-top: 10px;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Hide overflow to only show the carousel */
+  position: relative;
+}
 
    
 
 .carousel_container {
   position: relative;
   display: flex;
-  gap: 20px
+ 
  
 }
 
@@ -793,12 +805,27 @@
   border-color: #333; /* Highlight color for active image */
 }
 
+
+
+
 .carousel_slides {
   display: flex; /* Align slides in a row */
  flex-direction: column;
+ gap: 10px;
+ display: flex;
+ overflow: hidden;
+ width: 100%;
+ height: 100%;/* Set height large enough to allow scrolling */
+ overflow-y: auto; 
 }
 .carousel_slide {
   display: flex; /* Initially hide all slides */
+  justify-content: center;
+  min-width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0; /* Each slide takes up the full viewport height */
+  display: flex;
+  align-items: center; /* Center content vertically */
   justify-content: center;
   
 }
@@ -806,8 +833,8 @@
 .carousel_image {
   display: block; /* Remove any extra space around the image */
   flex-direction: column;
-  max-width: 400px; /* Set desired maximum width */
-  max-height: 400px; /* Set desired maximum height */
+  max-width: 500px; /* Set desired maximum width */
+  max-height: 500px; /* Set desired maximum height */
   width: auto; /* Maintain aspect ratio */
   height: auto; /* Maintain aspect ratio */
   object-fit: contain;
