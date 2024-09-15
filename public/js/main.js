@@ -36,3 +36,31 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+
+/* Set the Dropdown menu for the details-card */
+const buttons = document.querySelectorAll(".accordion-button");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const contentId = button.getAttribute("aria-controls");
+    const content = document.getElementById(contentId);
+    const isExpanded = button.getAttribute("aria-expanded") === "true";
+    
+    // Close all other dropdowns before toggling the clicked one
+    buttons.forEach(b => {
+      const otherContentId = b.getAttribute("aria-controls");
+      const otherContent = document.getElementById(otherContentId);
+      b.setAttribute("aria-expanded", "false");
+      otherContent.hidden = true;
+    });
+
+    // Toggle the clicked dropdown
+    if (isExpanded) {
+      button.setAttribute("aria-expanded", "false");
+      content.hidden = true;
+    } else {
+      button.setAttribute("aria-expanded", "true");
+      content.hidden = false;
+    }
+  });
+});
