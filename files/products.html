@@ -3,152 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/globals.css" />
+  <link rel="stylesheet" href="/assets/index.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
     <title>Products</title>
 </head>
 
-    <div class="header-center container-fluid">
-        <div class="row">
-            <div class="col">
-                <div class="navbar-header navbar-header-custom">
-                    <div class="pull-left">
-                        <button class="navbar-header__hamburger navbar-toggler" type="button" aria-controls="so-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                            <i class="iconfont-hamburger" aria-hidden="false">
+<header class="header-border">
+      
+  <div class="header-container">
+   
+        <div class="logo-wrapper">
+          <div class="logo-container">
+            <a href="/" class="logo-link">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/642556b94912ff5578382984c1ccfba7e4df16bfd84558e1d0be97ff56a94326?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591"
+                alt="Company Logo"
+                class="logo-image"
+              />
+            </a>
+          </div>
+        </div>
 
-                            </i>
-                        </button>
-
-                    </div>
-
-                </div>
-                <style>
-                  .header-border { border-bottom: 1px solid #c7c7c7; background-color: #121212; padding-top: 16px; }
-                  .header-container { display: flex; width: 100%; justify-content: center; flex-wrap: wrap; }
-                  .header-inner { display: flex; width: 100%; max-width: 1920px; flex-direction: column; align-items: center; padding: 0 115px; }
-                  .header-content { display: flex; width: 100%; max-width: 1690px; align-items: start; flex-wrap: wrap; padding: 0 29px; }
-                  .logo-wrapper { display: flex; min-height: 52px; align-items: center; padding: 10px 0; }
-                  .logo-container { width: 51px; }
-                  .logo-link { display: flex; justify-content: center; }
-                  .logo-image { aspect-ratio: 1.59; object-fit: contain; width: 51px; }
-                  .nav-wrapper { min-height: 68px; padding-left: 16px; color: rgba(255, 255, 255, 0.75); font: 500 16px/1 Roboto, sans-serif; }
-                  .nav-container { background-color: #121212; max-width: 319px; }
-                  .nav-inner { display: flex; min-width: 240px; width: 210px; padding-left: 15px; max-width: 349px; }
-                  .nav-menu { display: flex; align-items: center; height: 100%; }
-                  .menu-item { display: flex; min-height: 68px; }
-                  .menu-link { text-decoration: underline; border-radius: 4px 4px 0 0; padding: 16px 16px 32px; }
-                  .search-wrapper { display: flex; min-height: 52px; padding-left: 16px; }
-                  .search-container { display: flex; width: 100%; padding-left: 80px; align-items: center; flex-wrap: wrap; }
-                  .search-inner { display: flex; justify-content: start; padding: 14px 0; }
-                  .search-form { position: relative; width: 100%; max-width: 252px; }
-                  .search-input { border-radius: 8px; background-color: #333; min-height: 40px; width: 100%; color: rgba(255, 255, 255, 0.6); padding: 11px 40px 11px 16px; font: 400 16px Roboto, sans-serif; }
-                  .search-button { border-radius: 0 8px 8px 0; position: absolute; min-height: 40px; width: 44px; right: 0; bottom: 0; padding: 7px 13px; }
-                  .search-icon { width: 17px; }
-                  .icon-wrapper { display: flex; padding-left: 16px; }
-                  .icon-container { width: 24px; }
-                  .icon-link { display: flex; align-items: center; }
-                  .icon-image { aspect-ratio: 1; object-fit: contain; width: 100%; }
-                  .cart-icon { width: 20px; }
-                  .language-selector { display: flex; align-items: center; padding: 8px 0; }
-                  .flag-wrapper { padding-left: 24px; width: 48px; }
-                  .flag-image { aspect-ratio: 1; object-fit: contain; width: 24px; }
-                  .arrow-wrapper { min-height: 20px; padding-left: 4px; width: 24px; }
-                  .arrow-container { min-height: 20px; width: 20px; padding: 2px 6px; }
-                  .arrow-image { aspect-ratio: 0.5; object-fit: contain; width: 100%; }
-                  
-                  @media (max-width: 991px) {
-                    .header-container, .header-inner, .header-content, .search-wrapper { max-width: 100%; }
-                    .header-inner { padding: 0 20px; }
-                    .header-content { padding: 0 20px; }
-                    .search-input { padding-right: 20px; }
-                  }
-                  </style>
-                  
-                  <header class="header-border">
-                    <div class="header-container">
-                      <div class="header-inner">
-                        <div class="header-content">
-                          <div class="logo-wrapper">
-                            <div class="logo-container">
-                              <a href="/" class="logo-link">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/642556b94912ff5578382984c1ccfba7e4df16bfd84558e1d0be97ff56a94326?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="Company Logo" class="logo-image" />
-                              </a>
-                            </div>
-                          </div>
-                          <nav class="nav-wrapper">
-                            <div class="nav-container">
-                              <div class="nav-inner">
-                                <ul class="nav-menu">
-                                  <li class="menu-item">
-                                    <a href="/files/products.html" class="menu-link">Tea</a>
-                                  </li>
-                                  <li class="menu-item">
-                                    <a href="/files/card.html" class="menu-link">Card</a>
-                                  </li>
-                                  <li class="menu-item">
-                                    <a href="https://timothyitayi.com/" class="menu-link" target="_blank">CV</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </nav>
-                          <div class="search-wrapper">
-                            <div class="search-container">
-                              <div class="search-inner">
-                                <form class="search-form" role="search">
-                                  <label for="search-input" class="visually-hidden">Find products and articles</label>
-                                  <input type="search" id="search-input" class="search-input" placeholder="Find products and articles" />
-                                  <button type="submit" class="search-button">
-                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9c0cfee276f1180b469092fb2adee13080525e4ce6771d19c69e6d8756566b1b?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="Search" class="search-icon" />
-                                  </button>
-                                </form>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="icon-wrapper">
-                            <div class="icon-container">
-                              <a href="#" class="icon-link">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/628808087b1b74ee9946b9b813b9ddb27bda876f8b53f8248fb2dd645cc4ac4a?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="User Account" class="icon-image" />
-                              </a>
-                            </div>
-                          </div>
-                          <div class="icon-wrapper">
-                            <div class="icon-container">
-                              <a href="#" class="icon-link">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aadb26632264dc6266bdcab973720ac5a5c79ffd25d7f8d30241dad6dd6fc176?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="Favorites" class="icon-image" />
-                              </a>
-                            </div>
-                          </div>
-                          <div class="icon-wrapper">
-                            <a href="#" class="icon-link">
-                              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e181754ef7fd6004193ae20d348551de091919e7823664b0a42f9f81bdd0f3ec?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="Notifications" class="icon-image" />
-                            </a>
-                          </div>
-                          <div class="icon-wrapper">
-                            <div class="icon-container">
-                              <a href="#" class="icon-link" aria-label="Shopping Cart">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/422f65046006825a6ee726b0ebca342d820aac571457c787a3df72e65145ae1b?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" class="cart-icon" />
-                              </a>
-                            </div>
-                          </div>
-                          <div class="icon-wrapper">
-                            <div class="icon-container">
-                              <button class="language-selector" aria-label="Select Language">
-                                <span class="flag-wrapper">
-                                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/70e629c2eb77cd7be438ad13cbcbcafd9ca1cac7136ad5181ad19925dd81de1c?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="United States Flag" class="flag-image" />
-                                </span>
-                                <span class="arrow-wrapper">
-                                  <span class="arrow-container">
-                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4c1ed28da3f23e4f0861154c505c03d2dbda65f2ff9527b4d158c8056757f9db?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" class="arrow-image" />
-                                  </span>
-                                </span>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+        <div class="nav-container">
+          <div class="nav-inner">
+            <!-- Navigation Menu -->
+            <ul class="nav-menu" id="menu-list">
+              <li class="menu-item">
+                <a href="/files/products.html" class="menu-link">Tea</a>
+              </li>
+              <li class="menu-item">
+                <a href="/files/card.html" class="menu-link">Card</a>
+              </li>
+              <li class="menu-item">
+                <a
+                  href="https://timothyitayi.com/"
+                  class="menu-link"
+                  target="_blank"
+                  >CV</a
+                >
+              </li>
+            </ul>
+            <div id="burger-menu" onclick="openNav()">
+              <span class="burger-menu"></span>
+             
             </div>
-          
-</header>
+          </div>
+
+          <!-- Side Navigation Menu (hidden by default) -->
+          <div id="mySidenav" class="sidenav">
+            <a
+              href="javascript:void(0)"
+              class="closebtn"
+              onclick="closeNav()"
+              >&times;</a
+            >
+            <a href="/files/products.html">Tea</a>
+            <a href="/files/card.html">Card</a>
+            <a href="https://timothyitayi.com/" target="_blank">CV</a>
+          </div>
+    
+      </header>
 <body>
   <style>
     .product-grid { display: flex; width: 100%; flex-direction: column; justify-content: flex-start; }
