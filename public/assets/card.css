@@ -699,11 +699,12 @@
 }
 
 .product-image {
-  max-width: 600px; /* Set desired maximum width */
-  max-height: 600px; /* Set desired maximum height */
+  display: flex;
+  max-width: 500px; /* Set desired maximum width */
+  max-height: 500px; /* Set desired maximum height */
   width: auto; /* Maintain aspect ratio */
   height: auto; /* Maintain aspect ratio */
-  object-fit: cover; 
+  object-fit: contain; 
 }
 
 
@@ -756,5 +757,61 @@
 
    
 
+.carousel_container {
+  position: relative;
+  display: flex;
+  gap: 20px
+ 
+}
 
+.carousel_navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.carousel_navigation li {
+  margin: 0 5px;
+}
+
+.carousel_navigation a {
+  display: block;
+}
+
+.navigation_image {
+  width: 60px; /* Adjust size as needed */
+  height: auto;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.carousel_navigation a.active .navigation_image {
+  border-color: #333; /* Highlight color for active image */
+}
+
+.carousel_slides {
+  display: flex; /* Align slides in a row */
+ flex-direction: column;
+}
+.carousel_slide {
+  display: flex; /* Initially hide all slides */
+  justify-content: center;
+  
+}
+
+.carousel_image {
+  display: block; /* Remove any extra space around the image */
+  flex-direction: column;
+  max-width: 400px; /* Set desired maximum width */
+  max-height: 400px; /* Set desired maximum height */
+  width: auto; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain;
+}
+.carousel_slide.active {
+  display: block; /* Show only active slide */
+}
