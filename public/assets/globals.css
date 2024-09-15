@@ -555,7 +555,7 @@ body {
   padding: 10px 22px;
   border: 1px solid transparent; /* Initial border to maintain layout */
   transition: border-color 0.3s ease; /* Smooth transition for the border color */
-  background-color: #e7e4e4;
+  background-color:var(--black-30, rgba(82, 82, 82, 0.04));
 }
 
 .tea-product-card:hover {
@@ -567,7 +567,7 @@ body {
 .add-to-cart-button {
 
   color: #5b5b5b; /* Button text color */
-  border: 1px solid transparent; /* Remove default border */
+  border: 1px solid transparent rgba(0, 0, 0, 0.45); /* Remove default border */
   padding: 10px 15px; /* Add padding */
   cursor: pointer; /* Pointer cursor on hover */
   transition: background-color 0.3s ease; /* Smooth transition for background color */
@@ -669,7 +669,6 @@ body {
   width: calc(100% - 26px); /* Make the button width 100% of the card minus some padding */
   box-sizing: border-box; /* Include padding and border in the button's width */
   border-radius: 4px;
-  border: 1px solid var(--black-30, rgba(82, 82, 82, 0.3));
   position: absolute;
   bottom: 13px;
   left: 13px
@@ -721,7 +720,7 @@ body {
   flex-direction: column;
   justify-content: start;
   padding: 10px 12px 20px;
-  background-color: #e7e4e4;
+  background-color: rgba(82, 82, 82, 0.01);
 }
 
 .product-title-wrapper {
@@ -730,8 +729,7 @@ body {
   line-height: 1.2; /* Adjust line height for better spacing */
   color: rgba(0, 0, 0, 0.9) !important;
   font-family: 'HelveticaNowTextMid'; /* Apply font-family correctly */
-  margin: 0; /* Ensure there's no extra margin affecting layout */
-  padding: 0; /* Remove default padding if any */
+ 
 }
 
 .product-title {
@@ -757,8 +755,8 @@ body {
 .product-type-container {
   display: flex;
   width: 100%;
-  gap: 9px;
-  padding: 2px 0;
+ margin-top: 5px;
+
 }
 
 .loose-leaf-icon-wrapper {
@@ -788,8 +786,8 @@ body {
 }
 
 .product-type-text {
-  font-size: 1em;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 300;
   line-height: 20px;
   color: rgba(0, 0, 0, .9) !important;
   font-family:'HelveticaNowText'
@@ -808,7 +806,7 @@ body {
 }
 
 .product-background {
-  background-color: #e7e4e4;
+  background-color:var rgba(82, 82, 82, 0.01);
   position: relative;
   display: flex;
   width: 100%;
