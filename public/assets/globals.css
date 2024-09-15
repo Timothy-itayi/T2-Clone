@@ -544,7 +544,9 @@ body {
     display: block;
   }
   
-
+.card-link{
+  text-decoration: none;
+}
 
 /* Product Card */
 .tea-product-card {
@@ -634,21 +636,6 @@ body {
 }
 
 
-/* Wishlist icon positioning */
-.wishlist-icon-wrapper {
-  position: relative;
-  display: inline-block;
-  width: 2em;
-  height: 2em;
-  line-height: 2em;
-  vertical-align: middle;
-}
-
-/* Styling for wishlist icon */
-.wishlist-icon {
-  width: 50px; /* Adjust size as needed */
-  height: 50px; /* Adjust size as needed */
-}
 
 .cart-button-container {
   position: absolute;

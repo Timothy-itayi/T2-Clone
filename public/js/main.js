@@ -170,3 +170,6 @@ ScrollTrigger.create({
   pin: true, // Pin the `.carousel-wrapper` container in place
   markers: false // Optional: for debugging purposes
 });
+
+
+// 
