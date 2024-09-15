@@ -249,18 +249,42 @@ body {
   display: flex;
   width: 100%;
   align-items: center;
+
 ;
   
 } 
 .menu-item {
   display: flex;
-  text-decoration: none;
+ text-decoration: none;
   text-align: center;
   transition: 0.15s ease-in-out;
   position: relative;
   font-family: 'HelveticaNowTextBold';
+
+
  
 } 
+
+.menu-link {
+  font-family: 'HelveticaNowTextBold';
+  border-radius: 4px 4px 0 0;
+  color: hsla(0, 0%, 100%, .75);
+  padding: 16px 16px 32px;
+  text-decoration: none;
+
+
+}
+
+.menu-link:hover {
+  color: #e67300;/* Change link text color on hover */
+  border-radius: 4px;
+  transition: width 0.3s ease-in-out;
+
+  text-decoration: none;
+}
+
+
+
 #burger-menu {
   cursor: pointer;
   display: block;
@@ -333,6 +357,14 @@ body {
   margin-left: 50px;
 }
 
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: row-reverse; /* Switch places of logo and burger menu */
+    justify-content: flex-end;
+  }
+}
+
 /* Responsive design: Hide the normal menu and show the burger menu on small screens */
 @media screen and (max-width: 768px) {
   .nav-menu {
@@ -364,24 +396,6 @@ body {
 }
 
 
-
-.menu-link {
-  font-family: 'HelveticaNowTextBold';
-  border-radius: 4px 4px 0 0;
-  color: hsla(0, 0%, 100%, .75);
-  padding: 16px 16px 32px;
-  
-  border-radius: 4px 4px 0 0;
-  text-decoration: none;
-
-}
-
-
-.menu-link:hover {
-  color: #fff;
-  background-color: #333;
-  border-radius: 4px;
-}
 
 @font-face {
   font-family: 'HelveticaNowTextBold';
