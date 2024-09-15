@@ -555,6 +555,7 @@ body {
   padding: 10px 22px;
   border: 1px solid transparent; /* Initial border to maintain layout */
   transition: border-color 0.3s ease; /* Smooth transition for the border color */
+  background-color: #e7e4e4;
 }
 
 .tea-product-card:hover {
@@ -586,7 +587,7 @@ body {
   position: relative;
   width: 100%;
 
-  background: var(--alabaster, #f8f8f8);
+ 
   position: relative;
   display: flex;
   width: auto;
@@ -633,23 +634,20 @@ body {
 }
 
 
-/* Wishlist Icon Wrapper */
+/* Wishlist icon positioning */
 .wishlist-icon-wrapper {
-  position: absolute; /* Position relative to the parent with position: relative */
-  top: 10px; /* Distance from the top edge of the card */
-  right: 10px; /* Distance from the right edge of the card */
-  z-index: 1; /* Ensure it is above other elements */
-  width: 43px; /* Adjust width as needed */
-  height: 43px; /* Adjust height as needed */
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
 }
 
-/* Wishlist Icon */
+/* Styling for wishlist icon */
 .wishlist-icon {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 100%; /* Ensure the icon fills the wrapper */
-  height: auto; /* Maintain aspect ratio */
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
 }
 
 .cart-button-container {
@@ -723,6 +721,7 @@ body {
   flex-direction: column;
   justify-content: start;
   padding: 10px 12px 20px;
+  background-color: #e7e4e4;
 }
 
 .product-title-wrapper {
@@ -809,7 +808,7 @@ body {
 }
 
 .product-background {
-  background: var(--alabaster, #f8f8f8);
+  background-color: #e7e4e4;
   position: relative;
   display: flex;
   width: 100%;
@@ -827,6 +826,7 @@ body {
   gap: 20px; /* Space between cards */
   justify-content: center; /* Center align cards horizontally */
   padding: 20px; /* Add some padding around the container */
+ 
 }
 
 
