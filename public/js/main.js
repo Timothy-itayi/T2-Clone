@@ -157,10 +157,16 @@ adjustSlideHeights();
 
 // Create a ScrollTrigger instance to manage smooth scrolling
 ScrollTrigger.create({
-  trigger: '.carousel',
+  trigger: '.carousel-wrapper', // Use wrapper as trigger
   start: 'top top',
-  end: () => `+=${document.querySelector('.carousel_slides').scrollHeight}`, // Scroll end position
+  end: () => {
+    const slides = gsap.utils.toArray('.carousel_slide');
+    const totalWidth = slides.reduce((total, slide) => total + slide.offsetWidth, 0);
+    const viewportWidth = window.innerWidth;
+    const endScroll = totalWidth - viewportWidth;
+    return `+=${endScroll}`; // Stop scrolling at the end of the last slide
+  },
   scrub: 1, // Smooth scrolling
-  pin: true, // Pin the `.carousel` container in place
-  markers: true // Optional: for debugging purposes
+  pin: true, // Pin the `.carousel-wrapper` container in place
+  markers: false // Optional: for debugging purposes
 });
