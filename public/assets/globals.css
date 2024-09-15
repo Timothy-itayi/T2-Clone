@@ -194,11 +194,11 @@ body {
 }
 
 .header-container {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
+
   
- 
+  width: 100%;
+  display: inline-flex;
+
 
   
 
@@ -231,7 +231,7 @@ body {
 
 .nav-container {
   background-color: #121212;
-  min-height: 68px;
+
  
   display:flex;
  justify-content: stretch;
@@ -249,7 +249,7 @@ body {
   display: flex;
   width: 100%;
   align-items: center;
-  height: 60%;
+;
   
 } 
 .menu-item {
@@ -261,22 +261,42 @@ body {
   font-family: 'HelveticaNowTextBold';
  
 } 
-
 #burger-menu {
-  display: none;
-	cursor: pointer;
-	height: 27px;
-	width: 27px;
-	margin: 50px;
-	overflow: visible;
-	position: relative;
-	z-index: 2;
+  cursor: pointer;
+  display: block;
+  padding: 10px;
 }
 
-#burger-menu .burger-icon {
-  font-size: 30px;
-  color: #fff;
+.burger-menu {
+  display: none;
+  width: 30px; /* Adjust the width */
+  height: 3px; /* Adjust the thickness */
+  background-color: #ffffff; /* Adjust the color */
+  position: relative;
+  transition: background-color 0.3s;
 }
+
+.burger-menu::before,
+.burger-menu::after {
+  content: '';
+  display: block;
+  width: 30px; 
+  height: 3px;
+  background-color: #f9f9f9; 
+  position: absolute;
+  left: 0;
+  transition: background-color 0.3s;
+}
+
+.burger-menu::before {
+  top: -8px; 
+}
+
+.burger-menu::after {
+  top: 8px; 
+}
+
+
 
 /* Side navigation menu */
 .sidenav {
@@ -319,7 +339,7 @@ body {
     display: none; /* Hide the regular menu */
   }
 
-  #burger-menu {
+  .burger-menu {
     display: block; /* Show the burger menu */
   }
 }
@@ -465,7 +485,7 @@ body {
   list-style: none;
   text-decoration: none;
   text-align: center;
-  gap: 50px;
+  gap: 20px;
   position: relative;
  
 }
@@ -474,14 +494,8 @@ body {
   align-items: center;
   
 }
-.icon-image {
-  aspect-ratio: 1;
-  object-fit: contain;
-  width: 100%;
-}
-.cart-icon {
-  width: 14px;
-}
+
+
 .Git{
     width: 20px
 }
@@ -491,10 +505,7 @@ body {
 }
 
 
-.flag-image {
-  object-fit: contain;
-  width: 20px;
-}
+
 
 
 @media (max-width: 991px) {
