@@ -26,6 +26,7 @@ body {
 .background-image-container {
   position: relative;
   width: 100%;
+  
 }
 
 .background-image img {
@@ -544,22 +545,14 @@ body {
   }
   
 
-/* Product Card */
-/* .tea-product-card {
-  display: flex;
-  max-width: 261px;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 12px;
-} */
 
 /* Product Card */
 .tea-product-card {
   display: flex;
-  max-width: 261px;
+  max-width: 300px;
   flex-direction: column;
   justify-content: center;
-  padding: 0 12px;
+  padding: 10px 22px;
   border: 1px solid transparent; /* Initial border to maintain layout */
   transition: border-color 0.3s ease; /* Smooth transition for the border color */
 }
@@ -577,6 +570,8 @@ body {
   padding: 10px 15px; /* Add padding */
   cursor: pointer; /* Pointer cursor on hover */
   transition: background-color 0.3s ease; /* Smooth transition for background color */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .add-to-cart-button:hover {
@@ -584,11 +579,17 @@ body {
   color: rgb(0, 0, 0) /* Darker shade of the button color on hover */
 }
 
-.product-background {
+
+.product-image-container {
+  display: flex;
+  justify-content: center; /* Center the image-wrapper horizontally */
+  position: relative;
+  width: 100%;
+
   background: var(--alabaster, #f8f8f8);
   position: relative;
   display: flex;
-  width: 100%;
+  width: auto;
   flex-direction: column;
   overflow: hidden;
   justify-content: start;
@@ -596,48 +597,67 @@ body {
   padding: 1px 1px 49px;
 }
 
-.product-image-container {
+/* Product Image Wrapper */
+.product-image-wrapper {
   position: relative;
-  z-index: 0;
   display: flex;
+  justify-content: center; /* Center images within the wrapper */
   width: 100%;
-  flex-direction: column;
-  overflow: hidden;
-  justify-content: start;
-  padding: 48px 32px 16px;
 }
 
-.product-image-wrapper {
-  z-index: 0;
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-}
 
 .product-image {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 170px;
-}
-
-.wishlist-icon-wrapper {
-  position: absolute;
-  z-index: 0;
-  display: flex;
-  width: 43px;
-  flex-direction: column;
+  
+  display: block;
   justify-content: center;
-  left: 185px;
-  right: 7px;
-  top: 7px;
+  width: 100%;
+  height: auto
 }
 
+.product-image-hover {
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.tea-product-card:hover .product-image-hover {
+  opacity: 1; /* Show hover image on hover */
+}
+
+.tea-product-card:hover .product-image-default {
+  opacity: 0; /* Hide default image on hover */
+}
+
+
+/* Wishlist Icon Wrapper */
+.wishlist-icon-wrapper {
+  position: absolute; /* Position relative to the parent with position: relative */
+  top: 10px; /* Distance from the top edge of the card */
+  right: 10px; /* Distance from the right edge of the card */
+  z-index: 1; /* Ensure it is above other elements */
+  width: 43px; /* Adjust width as needed */
+  height: 43px; /* Adjust height as needed */
+}
+
+/* Wishlist Icon */
 .wishlist-icon {
   aspect-ratio: 1;
   object-fit: contain;
   object-position: center;
-  width: 100%;
+  width: 100%; /* Ensure the icon fills the wrapper */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.cart-button-container {
+  position: absolute;
+  bottom: 10px; /* Position from the bottom */
+  left: 10px; /* Position from the left */
+  right: 10px; /* Position from the right */
+  z-index: 1; /* Ensure it is above other elements */
 }
 
 .add-to-cart-button {
@@ -648,11 +668,13 @@ body {
   position: absolute;
   z-index: 0;
   display: flex;
-  width: 210px;
-  max-width: 100%;
-  right: 13px;
+  width: calc(100% - 26px); /* Make the button width 100% of the card minus some padding */
+  box-sizing: border-box; /* Include padding and border in the button's width */
+  border-radius: 4px;
+  border: 1px solid var(--black-30, rgba(82, 82, 82, 0.3));
+  position: absolute;
   bottom: 13px;
-  padding: 9px 74px;
+  left: 13px
 }
 
 .price-text {
@@ -705,24 +727,33 @@ body {
 
 .product-title-wrapper {
   font-size: 1em;
-  font-weight: 700;
-  line-height: 20px;
-  color: rgba(0, 0, 0, .9) !important;
-  justify-content: start;
-  font: 16px 'HelveticaNowTextMid';
+  font-weight: 200;
+  line-height: 1.2; /* Adjust line height for better spacing */
+  color: rgba(0, 0, 0, 0.9) !important;
+  font-family: 'HelveticaNowTextMid'; /* Apply font-family correctly */
+  margin: 0; /* Ensure there's no extra margin affecting layout */
+  padding: 0; /* Remove default padding if any */
 }
+
+.product-title {
+  padding: 2px 0;
+  font-size: 1em;
+  font-weight: 200;
+  line-height: 1.2; /* Adjust line height for better spacing */
+  color: rgba(0, 0, 0, 0.9) !important;
+  word-wrap: break-word; /* Ensure long words wrap properly */
+  overflow-wrap: break-word; /* Support for long words breaking */
+  white-space: normal; /* Allow text to wrap normally */
+  font-family: 'HelveticaNowTextMid'; /* Apply font-family correctly */
+}
+
+
 
 @font-face {
   font-family: 'HelveticaNowTextMid';
   src: url(/fonts/helvetica-text/HelveticaNow-Text-Mid.ttf);
 }
-.product-title {
-  padding: 2px 0;
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 20px;
-  color: rgba(0, 0, 0, .9) !important;
-}
+
 
 .product-type-container {
   display: flex;
@@ -777,6 +808,18 @@ body {
   border: 0;
 }
 
+.product-background {
+  background: var(--alabaster, #f8f8f8);
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  overflow: hidden;
+  justify-content: start;
+  flex: 1;
+  padding: 1px 1px 49px;
+}
+
 
 .product-card-container {
   display: flex;
@@ -784,6 +827,52 @@ body {
   gap: 20px; /* Space between cards */
   justify-content: center; /* Center align cards horizontally */
   padding: 20px; /* Add some padding around the container */
+}
+
+
+
+/* Responsive Styles for Smaller Screens */
+
+/* Responsive Styling */
+@media (min-width: 768px) {
+  .add-to-cart-button {
+    max-width: 100%; /* Ensure button doesn't exceed card width */
+  }
+}
+
+@media (max-width: 1200px) {
+  .tea-product-card {
+    max-width: 250px; /* Adjust for medium-sized screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .tea-product-card {
+    max-width: 200px; /* Adjust for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .tea-product-card {
+    max-width: 150px; /* Adjust for very small screens */
+  }
+}/* Responsive Styles for Smaller Screens */
+@media (max-width: 1200px) {
+  .tea-product-card {
+    max-width: 250px; /* Adjust for medium-sized screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .tea-product-card {
+    max-width: 200px; /* Adjust for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .tea-product-card {
+    max-width: 150px; /* Adjust for very small screens */
+  }
 }
 /* Footer styles */
 
