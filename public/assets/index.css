@@ -1,351 +1,151 @@
+/* General Container Styling */
 .romantic-gift-container {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  
-  @media (max-width: 991px) {
-    .romantic-gift-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px; /* Added padding for some spacing */
+}
+
+/* Wrapper Styling */
+.romantic-gift-wrapper {
+  position: relative;
+  display: flex;
+  width: 1060px;
+  max-width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Content Styling */
+.romantic-gift-content {
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: flex-start;
+  padding: 236px 0 240px;
+}
+
+/* Image Styling */
+.romantic-gift-image {
+  display: flex;
+  min-height: 24px;
+  padding-top: 4px;
+  background: url('your-image-url.jpg') no-repeat center center; /* Add a background image */
+  background-size: cover; /* Make sure it covers the entire div */
+}
+
+/* Background Styling */
+.romantic-gift-background {
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  min-height: 500px;
+  width: 100%;
+  padding-right: 127px;
+  align-items: flex-start;
+  justify-content: center;
+  left: -128px;
+  right: 1px;
+  top: 0;
+  bottom: 0;
+  background-color: #fbf3de; /* A subtle background color */
+}
+
+/* Color Block */
+.romantic-gift-color-block {
+  background: #fbf3de;
+  position: absolute;
+  z-index: 0;
+  width: 392px;
+  height: 500px;
+  left: 0;
+  bottom: 0;
+}
+
+/* Inner Wrapper Styling */
+.romantic-gift-inner-wrapper {
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1680px;
+  padding: 24px 9px;
+}
+
+/* Flex Container */
+.romantic-gift-flex-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+/* Text Container Styling */
+.romantic-gift-text-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 58px 0;
+}
+
+/* Title Styling */
+.romantic-gift-title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #000;
+  font-family: 'Dosis', sans-serif;
+}
+
+/* Description Styling */
+.romantic-gift-description {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* CTA Buttons */
+.romantic-gift-primary-cta-button {
+  display: block;
+  background-color: #121212;
+  color: white;
+  text-align: center;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.romantic-gift-secondary-cta-button {
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: #121212;
+  text-align: center;
+  padding: 12px 25px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Media Query Adjustments */
+@media (max-width: 991px) {
+  .romantic-gift-container, .romantic-gift-wrapper, .romantic-gift-content, 
+  .romantic-gift-image, .romantic-gift-inner-wrapper, .romantic-gift-flex-container, 
+  .romantic-gift-content-wrapper, .romantic-gift-text-container {
       max-width: 100%;
-    }
+      padding: 20px;
   }
-  
-  .romantic-gift-wrapper {
-    position: relative;
-    display: flex;
-    width: 1060px;
-    max-width: 100%;
-    flex-direction: column;
-    justify-content: flex-start;
+
+  .romantic-gift-primary-cta-button, .romantic-gift-secondary-cta-button {
+      padding: 12px 20px;
   }
-  
-  .romantic-gift-content {
-    z-index: 0;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    overflow: hidden;
-    justify-content: flex-start;
-    padding: 236px 0 240px;
-  }
-  
-  @media (max-width: 991px) {
-    .romantic-gift-content {
-      max-width: 100%;
-      padding: 100px 0;
-    }
-  }
-  
-  .romantic-gift-image {
-    display: flex;
-    min-height: 24px;
-    padding-top: 4px;
-  }
-  
-  @media (max-width: 991px) {
-    .romantic-gift-image {
-      max-width: 100%;
-    }
-  }
-  
-  .romantic-gift-background {
-    position: absolute;
-    z-index: 0;
-    display: flex;
-    min-height: 500px;
-    width: 100%;
-    padding-right: 127px;
-    align-items: flex-start;
-    justify-content: center;
-    left: -128px;
-    right: 1px;
-    top: 0;
-    bottom: 0;
-  }
-  
-  @media (max-width: 991px) {
-    .romantic-gift-background {
-      padding-right: 20px;
-    }
-  }
-  
-  .romantic-gift-color-block {
-    background: var(--www-t-2-tea-com-citrine-white, #fbf3de);
-    align-self: flex-start;
-    position: absolute;
-    z-index: 0;
-    display: flex;
-    min-width: 240px;
-    width: 392px;
-    height: 500px;
-    left: 0;
-    bottom: 0;
-  }
-  
-  .romantic-gift-inner-wrapper {
-    z-index: 0;
-    display: flex;
-    min-width: 240px;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
-    flex-basis: 0%;
-    max-width: 1680px;
-    padding: 24px 9px;
-  }
-  
-  @media (max-width: 991px) {
-    .romantic-gift-inner-wrapper {
-      max-width: 100%;
-    }
-  }
-  
-  .romantic-gift-flex-container {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    flex-wrap: wrap;
-    height: 100%;
-  }
-  
-  @media (max-width: 991px) {
-    .romantic-gift-flex-container {
-      max-width: 100%;
-    }
-  }
-  
-  .romantic-gift-content-wrapper {
-    align-self: stretch;
-    display: flex;
-    min-width: 240px;
-    min-height: 452px;
-    width: 100%;
-    max-width: 1042px;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
-    flex-basis: 0%;
-    margin: auto 0;
-    padding: 0 15px;
-  }
-  
-  @media (max-width: 991px) {
-    .romantic-gift-content-wrapper {
-      max-width: 100%;
-    }
-  }
-  
-  .romantic-gift-text-container {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    flex: 1;
-    padding: 58px 0;
-  }
-  
-  @media (max-width: 991px) {
-    .romantic-gift-text-container {
-      max-width: 100%;
-    }
-  }
-  
-  .romantic-gift-info {
-    display: flex;
-    width: 340px;
-    max-width: 340px;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .romantic-gift-logo-wrapper {
-    display: flex;
-    width: 100%;
-    padding-bottom: 16px;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  
-  .romantic-gift-logo-container {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 20px 0 24px;
-  }
-  
-  .romantic-gift-logo {
-    display: flex;
-    height: 24px;
-    width: 250px;
-    max-width: 100%;
-    padding-top: 4px;
-    align-items: center;
-    overflow: hidden;
-    justify-content: flex-start;
-  }
-  
-  .romantic-gift-logo-image {
-    aspect-ratio: 3.68;
-    object-fit: contain;
-    object-position: center;
-    width: 250px;
-    align-self: stretch;
-    min-width: 240px;
-    margin: auto 0;
-  }
-  
-  .romantic-gift-title-wrapper {
-    display: flex;
-    width: 100%;
-    padding-bottom: 16px;
-    flex-direction: column;
-    color: var(--www-t-2-tea-com-black, #000);
-    justify-content: flex-start;
-    font: 700 40px/1.1 Dosis, sans-serif;
-  }
-  
-  .romantic-gift-description-wrapper {
-    display: flex;
-    width: 100%;
-    padding-bottom: 16px;
-    flex-direction: column;
-    color: var(--www-t-2-tea-com-black, #000);
-    justify-content: flex-start;
-    font: 400 16px/24px Roboto, sans-serif;
-  }
-  
-  .romantic-gift-cta-wrapper {
-    display: flex;
-    width: 100%;
-    padding-bottom: 8px;
-    flex-direction: column;
-    text-align: center;
-    justify-content: flex-start;
-    font: 500 16px/1 Roboto, sans-serif;
-  }
-  
-  .romantic-gift-cta-container {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  
-  .romantic-gift-primary-cta {
-    display: flex;
-    min-width: 258px;
-    min-height: 60px;
-    flex-direction: column;
-    align-items: flex-start;
-    color: var(--www-t-2-tea-com-white, #fff);
-    justify-content: flex-start;
-    padding: 0 16px 16px 0;
-  }
-  
-  .romantic-gift-primary-cta-button {
-    align-self: stretch;
-    border-radius: 4px;
-    background: var(--www-t-2-tea-com-cod-gray, #121212);
-    min-height: 44px;
-    padding: 12px 24px;
-  }
-  
-  @media (max-width: 991px) {
-    .romantic-gift-primary-cta-button {
-      padding: 0 20px;
-    }
-  }
-  
-  .romantic-gift-secondary-cta {
-    display: flex;
-    min-height: 60px;
-    flex-direction: column;
-    align-items: flex-start;
-    color: var(--www-t-2-tea-com-cod-gray, #121212);
-    justify-content: flex-start;
-    padding: 0 16px 16px 0;
-  }
-  
-  .romantic-gift-secondary-cta-button {
-    align-self: stretch;
-    border-radius: 4px;
-    border: 1px solid var(--www-t-2-tea-com-black-30, rgba(0, 0, 0, 0.3));
-    min-height: 44px;
-    padding: 12px 25px;
-  }
-  
-  @media (max-width: 991px) {
-    .romantic-gift-secondary-cta-button {
-      padding: 0 20px;
-    }
-  }
-  
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-  /* }          -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  --blue: #0070d2;
-  --indigo: #6610f2;
-  --purple: #5a6ab7;
-  --pink: #e83e8c;
-  --red: #c00;
-  --orange: #fd7e14;
-  --yellow: #ffc107;
-  --green: #008827;
-  --teal: #20c997;
-  --cyan: #17a2b8;
-  --white: #fff;
-  --gray: #6c757d;
-  --gray-dark: #343a40;
-  --primary: #00a1e0;
-  --secondary: #6c757d;
-  --success: #008827;
-  --info: #17a2b8;
-  --warning: #ffc107;
-  --danger: #c00;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --breakpoint-xs: 0;
-  --breakpoint-sm: 544px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1025px;
-  --breakpoint-xl: 1200px;
-  --breakpoint-xxl: 1632px;
-  --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-  --swiper-theme-color: #007aff;
-  box-sizing: border-box;
-  margin: 0;
-  font-family: inherit;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  background-color: transparent;
-  border-radius: .1875rem;
-  cursor: pointer;
-  height: auto;
-  width: auto;
-  padding: 6px 3px;
-  border: none;
-  color: #fff;
-  line-height: 1;
-  font-size: .75em;
-  margin-right: 24px; */
+}
