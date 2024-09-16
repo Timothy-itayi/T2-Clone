@@ -612,7 +612,7 @@ body {
 .product-image {
   
   display: block;
-  justify-content: center;
+ position: relative;
   width: 100%;
   height: auto
 }
@@ -862,7 +862,7 @@ body {
 /* Footer styles */
 
 .footer {
-  padding: 56px 0 0;
+
   background: var(--www-t-2-tea-com-cod-gray, #121212);
   display: flex;
   flex-direction: column;
@@ -873,10 +873,8 @@ body {
   display: flex;
   width: 100%;
   max-width: 1662px;
-  padding-bottom: 140px;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px;
 }
 
 .logo-section {
@@ -962,7 +960,7 @@ body {
 
 @media (max-width: 991px) {
   .footer-container {
-    padding-bottom: 100px;
+    padding-bottom: 10px;
   }
 }
 

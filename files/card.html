@@ -140,39 +140,6 @@
         </section>
       
         
-<!--     
-          <div class="gallery">
-            <ul class="cards">
-           
-                <a>
-                  <img 
-                    loading="lazy" 
-                    src="/assets/Teas/melbourne_breakfast_100g_cube_tea.jpeg" 
-                    class="product-image " 
-                    alt="Default image" 
-                  />
-               
-                </a>
-                <a>
-                  <img 
-                    loading="lazy" 
-                    src="/assets/Teas/melbourne_breakfast_100g_back.jpeg" 
-                    class="product-image " 
-                    alt="Default image" 
-                  />
-               
-                </a>
-                <a>
-                  <img 
-                    loading="lazy" 
-                    src="/assets/Teas/melbourne_breakfast_100g_detail.jpeg" 
-                    class="product-image " 
-                    alt="Default image" 
-                  />
-               
-                </a>
-          </div>
-     -->
   
       
             <div class="product-gallery">
@@ -196,69 +163,78 @@
                 <div class="option-container">
                   <h2 class="option-title">Choose a format</h2>
                   <div class="option-buttons">
-                    <button class="option-button">
-                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e2a624924eda7768ca2591411ecda032cbf0ca624a068caca5cec65c359c8377?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
-                      Loose Leaf
+                    <button id="teaBookButton" class="option-button">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e2a624924eda7768ca2591411ecda032cbf0ca624a068caca5cec65c359c8377?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
+                        Tea Book 
                     </button>
-                    <button class="option-button">
+                    <button id="teaBagButton" class="option-button">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a1c538977a215ffbafe067a01f71a829fc2c3be06ba1fea4bb91facb172b9673?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
+                        Tea Bag
+                    </button>
+                </div>
+                <script>
+                  // Function to render the selected product format (Tea Book or Tea Bag)
+                  function renderProduct(option) {
+                    const productInfo = document.querySelector('.product-info');
+                
+                    let htmlContent = '';
+                
+                    if (option === 'Tea Book') {
+                      htmlContent = `
+                        <div class="product-type">
+                          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e2a624924eda7768ca2591411ecda032cbf0ca624a068caca5cec65c359c8377?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
+                          <span>Tea Book</span>
+                        </div>
+                        <h1 class="product-title">Melbourne Breakfast Tea Book</h1>
+                        <p class="product-description">A beautifully packaged book with a collection of Melbourne Breakfast Tea flavors.</p>
+                      `;
+                    } else if (option === 'Tea Bag') {
+                      htmlContent = `
+                        <div class="product-type">
+                          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a1c538977a215ffbafe067a01f71a829fc2c3be06ba1fea4bb91facb172b9673?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
+                          <span>Tea Bag</span>
+                        </div>
+                        <h1 class="product-title">Melbourne Breakfast Tea Bag Cube 25 pack</h1>
+                        <p class="product-description">Indulge and sip a smooth blend of bold, malty black tea and rich velvety vanilla.</p>
+                      `;
+                    }
+                
+                    // Update the product info section with the new content
+                    productInfo.innerHTML = htmlContent;
+                  }
+                
+                  // Event listeners for the option buttons
+                  document.getElementById('teaBookButton').addEventListener('click', function() {
+                    renderProduct('Tea Book');
+                  });
+                
+                  document.getElementById('teaBagButton').addEventListener('click', function() {
+                    renderProduct('Tea Bag');
+                  });
+                </script>
+                
+                  <!-- <div class="option-buttons">
+                    <button class="option-button" onclick="showTeaBook()">
+                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e2a624924eda7768ca2591411ecda032cbf0ca624a068caca5cec65c359c8377?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
+                      Tea Book
+                    </button>
+                    <button class="option-button" onclick="showTeaBag()">
                       <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a1c538977a215ffbafe067a01f71a829fc2c3be06ba1fea4bb91facb172b9673?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
                       Tea Bag
-                      <!-- <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4b21fdff1ac4d62fe0c1d21291a0f0243f321c75d4f0389da6ac1eff4c9d3211?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true"> -->
                     </button>
-                  </div>
+                  </div> -->
                 </div>
               </div>
-        
-           
-    
-        
-       
-             
-        
-        
-              <div class="product-details-section">
-                <!-- Description -->
-              
-              
-                  
-                  <section class="product-description-container">
-                    <p class="product-description">Description</p>
-                    <div class="icon-container">
-                      <div class="icon-wrapper">
-                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e9b9afd968a00ccd5dc58dd124e0340593d3cc0fdd30b4c912413c199170d6d?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" class="icon" alt="" />
-                      </div>
-                      <div id="ingredients-content" class="details-content" hidden>
-               
-                    </div>
-                  </section>
-              
-                <!-- Ingredients -->
-                <section class="product-description-container">
-                  <p class="product-description">Ingredients</p>
-                  <div class="icon-container">
-                    <div class="icon-wrapper">
-                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e9b9afd968a00ccd5dc58dd124e0340593d3cc0fdd30b4c912413c199170d6d?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" class="icon" alt="" />
-                    </div>
-                    <div id="ingredients-content" class="details-content" hidden>
-             
-                  </div>
-                </section>
-              
-                <!-- Brewing guide -->
-                <section class="product-description-container">
-                  <p class="product-description">Brewing Guide</p>
-                  <div class="icon-container">
-                    <div class="icon-wrapper">
-                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e9b9afd968a00ccd5dc58dd124e0340593d3cc0fdd30b4c912413c199170d6d?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" class="icon" alt="" />
-                    </div>
-                    <div id="ingredients-content" class="details-content" hidden>
-             
-                  </div>
-                </section>
-              </div>
+            </div>
          
         </section>
-        <script src="/js/main.js"></script>
+        <script src="/js/main.js"
+        
+        >
+        
+
+
+        </script>
 </body>
        
 <footer class="footer">
@@ -268,26 +244,9 @@
         <a href="/" class="logo-link">
           <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/404d2deed9d61288b70fe6bfe107a820de683310e0b4ad27a61b91aebc3f4b14?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" class="logo-image" alt="Company logo" />
         </a>
-      </div>
-    </section>
-    <section class="social-section">
-      <div class="social-container">
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/9d2923421b763abd3358e13f6ac53404f26d0fcaa511e49b2d35650f3a1c3fc2?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" class="github-icon" alt="GitHub icon" />
-        <a href="https://github.com/Timothy-itayi" class="github-link" target="_blank" rel="noopener noreferrer">
-          Follow me on GitHub
-        </a>
-      </div>
-    </section>
-    <nav class="links-section">
-      <div class="links-container">
-        <a href="https://timothyitayi.com/" class="footer-link" target="_blank" rel="noopener noreferrer">
-          Contact Us
-        </a>
-        <a href="https://www.linkedin.com/in/timothy-itayi-ab8754138/" class="footer-link" target="_blank" rel="noopener noreferrer">
-          LinkedIn
-        </a>
-      </div>
-    </nav>
+        <section class="social-section">
+    
+   
   </div>
 </footer>
 </html>
