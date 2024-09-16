@@ -612,7 +612,7 @@ body {
 .product-image {
   
   display: block;
-  justify-content: center;
+ position: relative;
   width: 100%;
   height: auto
 }
