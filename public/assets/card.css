@@ -233,9 +233,8 @@ body {
 .option-buttons {
   align-self: center;
   display: flex;
-  margin-top: 6px;
   width: 100%;
-  justify-content: start;
+  flex-direction: row;
   gap: 20px; /* Add spacing between the buttons */
 }
 .option-button:hover {
@@ -251,7 +250,7 @@ body {
   display: flex;
   min-height: 40px;
   width: 100%;
-  gap: 7px;
+
   padding: 12px 44px;
 }
 
@@ -803,7 +802,6 @@ body {
 
 .carousel {
   padding-left: 10px;
-  padding-top: 10px;
   height: 100vh; /* Full viewport height */
   overflow: hidden; /* Hide overflow to only show the carousel */
   position: relative;
@@ -821,13 +819,14 @@ body {
   display: flex;
   align-items: center; /* Center content vertically */
   justify-content: center;
+  scroll-behavior: smooth;
 }
+
 
 
 .carousel_slides {
   display: flex; /* Align slides in a row */
  flex-direction: column;
- gap: 10px;
  display: flex;
  overflow: hidden;
  width: 100%;
