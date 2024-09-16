@@ -88,7 +88,7 @@
             <div class="carousel_container">
         
           
-        <ul class="carousel_navigation">
+        <ul class="carousel_navigation" id="carousel-navigation">
           <li><a href="#slide_1">
               <img 
                   loading="lazy" 
@@ -115,7 +115,7 @@
           </a></li>
       </ul>
       <div class="carousel">
-        <div class="carousel_slides">
+        <div class="carousel_slides" id="carousel-slides">
             <div class="carousel_slide" id="slide_1">
                 <div class="carousel_image_container">
                     <img loading="lazy" src="/assets/Teas/melbourne_breakfast_100g_cube_tea.jpeg" class="carousel_image" alt="Melbourne Breakfast Cube Tea" />
@@ -152,26 +152,20 @@
                 <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ecaf66043902c43861258fafee534ad95c28ea2df6066bcbda88a67600a73ab2?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
                 <span>Tea Bag</span>
               </div>
+          
               <h1 class="product-title">Melbourne Breakfast Tea Bag Cube 25 pack</h1>
-         
-        
-              <p class="product-description">
-                Indulge and sip a smooth blend of bold, malty black tea and rich velvety vanilla.
-              </p>
-        
-              <div class="product-options">
-                <div class="option-container">
-                  <h2 class="option-title">Choose a format</h2>
-                  <div class="option-buttons">
-                    <button id="teaBookButton" class="option-button">
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e2a624924eda7768ca2591411ecda032cbf0ca624a068caca5cec65c359c8377?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
-                        Tea Book 
-                    </button>
-                    <button id="teaBagButton" class="option-button">
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a1c538977a215ffbafe067a01f71a829fc2c3be06ba1fea4bb91facb172b9673?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
-                        Tea Bag
-                    </button>
-                </div>
+              <p class="product-description">Indulge and sip a smooth blend of bold, malty black tea and rich velvety vanilla.</p>
+              <h2 class="option-title">Choose a format</h2>
+              <div class="option-buttons">
+                <button id="teaBookButton" class="option-button">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e2a624924eda7768ca2591411ecda032cbf0ca624a068caca5cec65c359c8377?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
+                  Tea Book 
+                </button>
+                <button id="teaBagButton" class="option-button">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a1c538977a215ffbafe067a01f71a829fc2c3be06ba1fea4bb91facb172b9673?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true" >
+                  Tea Bag
+                </button>
+              </div>
                 <script>
                   // Function to render the selected product format (Tea Book or Tea Bag)
                   function renderProduct(option) {
@@ -187,6 +181,17 @@
                         </div>
                         <h1 class="product-title">Melbourne Breakfast Tea Book</h1>
                         <p class="product-description">A beautifully packaged book with a collection of Melbourne Breakfast Tea flavors.</p>
+                        <h2 class="option-title">Choose a format</h2>
+                        <div class="option-buttons">
+                          <button id="teaBookButton" class="option-button">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e2a624924eda7768ca2591411ecda032cbf0ca624a068caca5cec65c359c8377?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
+                            Tea Book 
+                          </button>
+                          <button id="teaBagButton" class="option-button">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a1c538977a215ffbafe067a01f71a829fc2c3be06ba1fea4bb91facb172b9673?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
+                            Tea Bag
+                          </button>
+                        </div>
                       `;
                     } else if (option === 'Tea Bag') {
                       htmlContent = `
@@ -196,33 +201,43 @@
                         </div>
                         <h1 class="product-title">Melbourne Breakfast Tea Bag Cube 25 pack</h1>
                         <p class="product-description">Indulge and sip a smooth blend of bold, malty black tea and rich velvety vanilla.</p>
+                        <h2 class="option-title">Choose a format</h2>
+                        <div class="option-buttons">
+                          <button id="teaBookButton" class="option-button">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e2a624924eda7768ca2591411ecda032cbf0ca624a068caca5cec65c359c8377?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
+                            Tea Book 
+                          </button>
+                          <button id="teaBagButton" class="option-button">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a1c538977a215ffbafe067a01f71a829fc2c3be06ba1fea4bb91facb172b9673?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
+                            Tea Bag
+                          </button>
+                        </div>
                       `;
                     }
                 
                     // Update the product info section with the new content
                     productInfo.innerHTML = htmlContent;
+                
+                    // Reattach event listeners after rendering new content
+                    attachListeners();
                   }
                 
-                  // Event listeners for the option buttons
-                  document.getElementById('teaBookButton').addEventListener('click', function() {
-                    renderProduct('Tea Book');
-                  });
+                  // Function to attach event listeners to the buttons
+                  function attachListeners() {
+                    document.getElementById('teaBookButton').addEventListener('click', function() {
+                      renderProduct('Tea Book');
+                    });
                 
-                  document.getElementById('teaBagButton').addEventListener('click', function() {
-                    renderProduct('Tea Bag');
-                  });
+                    document.getElementById('teaBagButton').addEventListener('click', function() {
+                      renderProduct('Tea Bag');
+                    });
+                  }
+                
+                  // Initial attach listeners
+                  attachListeners();
                 </script>
                 
-                  <!-- <div class="option-buttons">
-                    <button class="option-button" onclick="showTeaBook()">
-                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e2a624924eda7768ca2591411ecda032cbf0ca624a068caca5cec65c359c8377?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
-                      Tea Book
-                    </button>
-                    <button class="option-button" onclick="showTeaBag()">
-                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a1c538977a215ffbafe067a01f71a829fc2c3be06ba1fea4bb91facb172b9673?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
-                      Tea Bag
-                    </button>
-                  </div> -->
+            
                 </div>
               </div>
             </div>
