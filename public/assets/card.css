@@ -802,6 +802,7 @@ body {
 
 .carousel {
   padding-left: 10px;
+ 
   height: 100vh; /* Full viewport height */
   overflow: hidden; /* Hide overflow to only show the carousel */
   position: relative;
@@ -810,12 +811,12 @@ body {
 }
 
 .carousel_slide {
-  display: inline-block; /* Ensure slides are inline */
+  flex-direction: column; /* Ensure slides are inline */
   height: 100%; /* Full height of carousel */
   justify-content: center;
   min-width: 100%;
+  padding-bottom: 15x;
   box-sizing: border-box;
-  flex-shrink: 0; /* Each slide takes up the full viewport height */
   display: flex;
   align-items: center; /* Center content vertically */
   justify-content: center;
