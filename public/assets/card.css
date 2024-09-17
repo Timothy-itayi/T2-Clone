@@ -800,8 +800,8 @@ body {
 
 .carousel {
   padding-left: 10px;
- 
-  height: 100vh; /* Full viewport height */
+ padding-top: 30px;
+  height: 100%; /* Full viewport height */
   overflow: hidden; /* Hide overflow to only show the carousel */
   position: relative;
   white-space: nowrap; /* Ensure slides are inline */
