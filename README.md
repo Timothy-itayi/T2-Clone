@@ -14,7 +14,6 @@ This project is a front-end clone of the T2 Tea website, built to closely mimic 
 **Home Page**
 
 - **NavBar:** A navigation bar that allows users to browse through different sections of the website.
-- **Banner:** A large banner displaying promotional content or featured products.
 - **Cards:** A grid of cards showcasing various products or categories, leading to the Products or Gallery page.
 - **Carousel:** A carousel component highlighting featured items or special offers.
 
@@ -26,7 +25,7 @@ This project is a front-end clone of the T2 Tea website, built to closely mimic 
 
 - **Title:** The name of the product.
 - **Description:** A detailed description of the product.
-- **Rating:** A rating system allowing users to see product reviews or ratings.
+
 
 ## Technologies Used
 
