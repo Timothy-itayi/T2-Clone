@@ -15,6 +15,9 @@ body {
     
   
 }
+.row{
+  flex-direction: row;
+}
 .container {
   display: flex;
   width: 100%;
@@ -66,7 +69,6 @@ body {
   display: flex;
   min-width: 240px;
   flex-direction: column;
-  align-items: start;
   width: 612px;
   max-width: 612px;
   padding: 16px 80px 68px 33px;
@@ -76,6 +78,7 @@ body {
 
 .product-title {
   margin-top: 4px;
+  text-align: start;
   width: 100%;
   color: #121212;
   font: 700 32px/36px Dosis, sans-serif;
@@ -89,6 +92,17 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.product-type{
+  align-items: start;
+}
+
+#product-type-image{
+  align-items: start;
+}
+
+#product-type-text{
+  text-align: left;
 }
 
 .option-container {
@@ -104,6 +118,7 @@ body {
 }
 
 .option-title {
+  text-align: center;
   width: 100%;
   color: rgba(0, 0, 0, 0.9);
   letter-spacing: -0.05px;
@@ -114,14 +129,11 @@ body {
   text-decoration: none;
   display: flex;
 }
-d
+
 .option-buttons {
-  padding-top: 30px;
-  
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  gap: 20px; /* Add spacing between the buttons */
+ align-items: center;
+
+ /* Add spacing between the buttons */
 }
 .option-button:hover {
   background-color: #f0f0f0; /* Light gray background on hover */
@@ -153,11 +165,9 @@ d
 @media (max-width: 491px) {
   /* Product info (first in order) */
   .product-details {
-    order: -2; /* Moves product details above everything */
+     /* Moves product details above everything */
     flex-direction: column;
-    padding: 0 15px;
-    align-items: center;
-    text-align: center;
+   
   }
 
   /* Product gallery (second in order) */
@@ -188,6 +198,7 @@ d
 
   .carousel_slides {
     width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -196,6 +207,7 @@ d
 
   .carousel_navigation {
     display: flex;
+    order: 1;
     flex-direction: row;
     justify-content: center;
     gap: 10px;
@@ -225,21 +237,37 @@ d
 
 
   .option-buttons {
+    justify-content: center;
     flex-direction: column;
-    gap: 15px;
-    width: 100%;
+    width: 60%;
   }
- */
+ 
 
-  #product-info{ 
-    
-      flex: 1 1 50%;
-      max-width: 50%;
-  
+  .product-description {
+    margin: 10px 0;
   }
+
+  #product-description {
+    
+      text-align: left;
+      font-size: 10px;
+      width: 100%;
+      overflow-wrap: break-word;
+      white-space: normal;
+  }
+
+  .option-title {
+    white-space: normal;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.9);
+    letter-spacing: -0.05px;
+    font: 500 16px/1 Roboto, sans-serif;
+  }
+
   .option-button {
     width: 100%;
-    padding: 12px 20px;
+    flex-direction: row;
+    
   }
 }
 
@@ -298,17 +326,6 @@ d
     margin: 15px 0;
   }
 
-  .option-buttons {
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 20px;
-    width: auto;
-  }
-
-  .option-button {
-    width: auto;
-    padding: 15px 25px;
-  }
 }
 
 
@@ -401,12 +418,14 @@ d
 
 /* Ensure product info takes up the remaining space */
 .product-info {
-  flex:  100px; /* Adjust the minimum width as needed */
+width: 100%; /* Adjust the minimum width as needed */
 }
 
 
 
-
+.product-description{
+  width: 100%;
+}
 
 
 .carousel_container {
@@ -462,7 +481,7 @@ d
 
 .carousel_slide {
   flex-direction: column; /* Ensure slides are inline */
-  height: 100%; /* Full height of carousel */
+  height: 10rem; /* Full height of carousel */
   justify-content: center;
   min-width: 100%;
   padding-bottom: 15x;
@@ -484,7 +503,7 @@ d
  max-width: auto;
  overflow-y: auto; 
 justify-content: center;
- height: 30rem;/* Set height large enough to allow scrolling */
+ height: 100%;/* Set height large enough to allow scrolling */
 
 }
 
@@ -492,8 +511,6 @@ justify-content: center;
 .carousel_image {
   display: block; /* Remove any extra space around the image */
   flex-direction: column;
-min-width: 200px;
-min-height: 200px;
   max-width: 100%; /* Set desired maximum width */
   /* Set desired maximum height */
   /* Maintain aspect ratio */
