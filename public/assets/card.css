@@ -22,73 +22,19 @@ body {
   flex-wrap: wrap;
 }
 
-.breadcrumb {
-  display: flex;
-  min-width: 240px;
-  width: 100%;
-  max-width: 1854px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  flex: 1;
-  flex-basis: 0%;
-  padding: 16px 255px 0;
-}
 
-.breadcrumb-list {
-  display: flex;
-  width: 100%;
-  max-width: 1344px;
-  justify-content: start;
-  flex-wrap: wrap;
-}
 
-.breadcrumb-item {
-  display: flex;
-  flex-direction: column;
-  color: rgba(0, 0, 0, 0.6);
-  white-space: nowrap;
-  justify-content: start;
-  padding: 3px 0 1px;
-  font: 500 10px/1.6 Roboto, sans-serif;
-}
 
-.breadcrumb-link {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  justify-content: start;
-  height: 100%;
-  padding: 3px 0 1px 6px;
-}
-
-.breadcrumb-icon {
-  align-self: stretch;
-  display: flex;
-  padding-right: 6px;
-  align-items: start;
-  justify-content: start;
-  width: 13px;
-  margin: auto 0;
-}
-
-.breadcrumb-text {
-  align-self: stretch;
-  color: rgba(0, 0, 0, 0.6);
-  white-space: nowrap;
-  margin: auto 0;
-  font: 500 10px/1.6 Roboto, sans-serif;
-}
 
 .product-gallery {
   display: flex;
   padding-top: 40px;
-  min-width: 240px;
-  align-items: start;
-  justify-content: space-between;
+ 
+  align-items: center;
+
   flex-wrap: wrap;
   flex: 1;
-  flex-basis: 113px;
+
 }
 
 .gallery-sidebar {
@@ -168,10 +114,10 @@ body {
   text-decoration: none;
   display: flex;
 }
-
+d
 .option-buttons {
   padding-top: 30px;
-  align-self: center;
+  
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -228,6 +174,18 @@ body {
     align-items: center;
   }
 
+  .carousel_image {
+    display: block; /* Remove any extra space around the image */
+    flex-direction: column;
+  min-width: 200px;
+  min-height: 200px;
+    max-width: 100%; /* Set desired maximum width */
+    /* Set desired maximum height */
+    /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+  
+  }
+
   .carousel_slides {
     width: 100%;
     display: flex;
@@ -244,6 +202,10 @@ body {
     padding-top: 10px;
   }
 
+  #carousel-navigation{ 
+    flex-direction: row ;
+  }
+
   .navigation_image {
     width: 50px;
   }
@@ -253,12 +215,28 @@ body {
     margin: 10px 0;
   }
 
+  #product-title {
+    text-align: left;
+    font-size: 28px;
+    width: 100%; /* or a specific value if needed */
+    overflow-wrap: break-word; /* For older browser compatibility */
+    white-space: normal;
+}
+
+
   .option-buttons {
     flex-direction: column;
     gap: 15px;
     width: 100%;
   }
+ */
 
+  #product-info{ 
+    
+      flex: 1 1 50%;
+      max-width: 50%;
+  
+  }
   .option-button {
     width: 100%;
     padding: 12px 20px;
@@ -268,17 +246,11 @@ body {
 /* For tablets */
 @media (max-width: 991px) {
   /* Product info (first in order) */
-  .product-details {
-    order: -2; /* Moves product details above everything */
-    flex-direction: column;
-    padding: 0 20px;
-    align-items: center;
-    text-align: center;
-  }
+
 
   /* Product gallery (second in order) */
   .product-gallery {
-    order: -1; /* Moves the product gallery below product info */
+    order: 1; /* Moves the product gallery below product info */
     width: 100%;
     padding: 20px 0;
   }
@@ -297,6 +269,17 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  .carousel_image {
+    display: block; /* Remove any extra space around the image */
+    flex-direction: column;
+  min-width: 200px;
+  min-height: 200px;
+    max-width: 100%; /* Set desired maximum width */
+    /* Set desired maximum height */
+    /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+  
+  }
 
   .carousel_navigation {
     display: flex;
@@ -306,8 +289,8 @@ body {
     padding-top: 10px;
   }
 
-  .navigation_image {
-    width: 60px;
+  #carousel-navigation{
+    flex-direction: row;
   }
 
   .product-title {
@@ -316,13 +299,14 @@ body {
   }
 
   .option-buttons {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: flex-start;
     gap: 20px;
-    width: 100%;
+    width: auto;
   }
 
   .option-button {
-    width: 100%;
+    width: auto;
     padding: 15px 25px;
   }
 }
@@ -371,10 +355,9 @@ body {
 
 .product-image {
   display: flex;
-  max-width: 500px; /* Set desired maximum width */
-  max-height: 500px; /* Set desired maximum height */
-  width: auto; /* Maintain aspect ratio */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Set desired maximum width */
+  height: auto; /* Set desired maximum height */
+ /* Maintain aspect ratio */
   object-fit: contain; 
 }
 
@@ -498,8 +481,9 @@ body {
   display: flex; /* Align slides in a row */
  flex-direction: column;
  display: flex;
+ max-width: auto;
  overflow-y: auto; 
- width: 100%;
+justify-content: center;
  height: 30rem;/* Set height large enough to allow scrolling */
 
 }
@@ -508,11 +492,13 @@ body {
 .carousel_image {
   display: block; /* Remove any extra space around the image */
   flex-direction: column;
-  max-width: 500px; /* Set desired maximum width */
-  max-height: 500px; /* Set desired maximum height */
-  width: auto; /* Maintain aspect ratio */
+min-width: 200px;
+min-height: 200px;
+  max-width: 100%; /* Set desired maximum width */
+  /* Set desired maximum height */
+  /* Maintain aspect ratio */
   height: auto; /* Maintain aspect ratio */
-  object-fit: contain;
+
 }
 .carousel_slide.active {
   display: block; /* Show only active slide */
