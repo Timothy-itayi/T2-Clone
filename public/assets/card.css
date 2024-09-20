@@ -16,21 +16,30 @@ body {
   
 }
 .row{
-  display: grid
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 
 
 .product-gallery {
-  display: flex;
+  display: inline-block;
   padding-top: 40px;
   align-items: center;
-  flex-wrap: wrap;
-  display: 'flexbox';
-
-
 }
 
+/* Ensure the gallery takes up a specific portion of the width */
+.product-details {
+  /* Adjust the minimum width as needed */
+  padding-bottom: 10px;
+  padding-top: 50px;
+  width: 100%;
+  padding-left: 30px;
+  flex-direction: column;
+  justify-content: center;
+
+}
 .carousel_container {
   position: relative;
   display: flex;
@@ -89,7 +98,6 @@ body {
   min-width: 100%;
   padding-bottom: 15x;
   box-sizing: border-box;
-  display: flex;
   align-items: center; /* Center content vertically */
   justify-content: center;
   
@@ -100,13 +108,11 @@ body {
 
 
 .carousel_slides {
-  display: flex; /* Align slides in a row */
- flex-direction: column;
- display: flex;
+
+display: inline-block;
  gap: 20px;
- max-width: auto;
+ max-width: 500px;
  overflow-y: auto; 
-justify-content: center;
  height: 100%;/* Set height large enough to allow scrolling */
 
 }
@@ -305,12 +311,7 @@ justify-content: center;
 
 
 
-/* Ensure the gallery takes up a specific portion of the width */
-.product-details {
-   /* Adjust the minimum width as needed */
-  display: flex;
-  flex-direction: column;
-}
+
 
 
 
@@ -329,18 +330,17 @@ width: 100%; /* Adjust the minimum width as needed */
 
 /* For phones */
 @media (max-width: 491px) {
-  /* Product info (first in order) */
-  .product-gallery {
-     /* Moves product details above everything */
-    flex-direction: column;
-   
-  }
 
+  /* Product info (first in order) */
+.row{
+  display: inline-flex;
+}
   /* Product gallery (second in order) */
   .product-details {
     order: 1; /* Moves the product gallery below product info */
     width: 100%;
     padding: 20px 0;
+    margin: 10%;
   }
 
   /* Carousel container (third in order) */
@@ -352,7 +352,7 @@ width: 100%; /* Adjust the minimum width as needed */
 
   .carousel_image {
     display: block; /* Remove any extra space around the image */
-    flex-direction: column;
+   
   min-width: 200px;
   min-height: 200px;
     max-width: 100%; /* Set desired maximum width */
@@ -364,12 +364,6 @@ width: 100%; /* Adjust the minimum width as needed */
 
   .carousel_slides {
     width: 100%;
-    height: auto;
-    gap: none;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
   }
 
   .carousel_navigation {
@@ -442,27 +436,36 @@ width: 100%; /* Adjust the minimum width as needed */
 @media (max-width: 991px) {
   /* Product info (first in order) */
 
-
-  /* Product gallery (second in order) */
-  .product-gallery {
-    order: 1; /* Moves the product gallery below product info */
-    width: 100%;
-    padding: 20px 0;
+  .row {
+   display: flex;
+   flex-direction: column;
   }
 
+  /* Product gallery (second in order) */
+  .product-gallery {/* Moves the product gallery below product info */
+    width: 100%;
+    padding: 20px 0;
+    flex-shrink: 0;
+  }
+
+  .product-details {
+    /* Adjust the minimum width as needed */
+    padding-bottom: 10px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  
+  }
+ 
   /* Carousel container (third in order) */
   .carousel_container {
-    order: 0; /* Moves carousel to the bottom */
+
     flex-direction: column;
     align-items: center;
   }
 
   .carousel_slides {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
   }
   .carousel_image {
     display: block; /* Remove any extra space around the image */
