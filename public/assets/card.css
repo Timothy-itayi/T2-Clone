@@ -19,28 +19,19 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 100%;
   justify-content: space-evenly;
 }
 
 
-
+ /* LEFT SIDE  */
 .product-gallery {
   display: inline-block;
   padding-top: 40px;
   align-items: center;
 }
 
-/* Ensure the gallery takes up a specific portion of the width */
-.product-details {
-  /* Adjust the minimum width as needed */
-  padding-bottom: 10px;
-  padding-top: 50px;
-  width: 100%;
-  padding-left: 30px;
-  flex-direction: column;
-  justify-content: center;
-
-}
+/* Carousel NAVIGATION styles */
 .carousel_container {
   position: relative;
   display: flex;
@@ -48,7 +39,6 @@ body {
  
  
 }
-
 .carousel_navigation {
   display: flex;
   flex-direction: column;
@@ -58,13 +48,11 @@ body {
  
 }
 
-.carousel_navigation li {
+.carousel_navigation l, .carousel_navigation a{
   margin: 0 5px;
-}
-
-.carousel_navigation a {
   display: block;
 }
+
 
 .navigation_image {
   width: 60px; /* Adjust size as needed */
@@ -79,85 +67,76 @@ body {
 
 
 
-.carousel::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, and Opera */
-}
 
+/* CAROUSEL STYLES */
 .carousel {
   padding-left: 50px;
  padding-top: 30px;
-  height: 100%; /* Full viewport height */
-  overflow: hidden; /* Hide overflow to only show the carousel */
+  height: 100%; 
+  overflow: hidden; 
   position: relative;
-   /* Ensure slides are inline */
-  scrollbar-width: thin; /* Firefox */
+
+  scrollbar-width: thin; 
 }
-
-
-
-
 
 .carousel_slides {
 
-display: inline-block;
- width: 400px;
- overflow-y: auto; 
- height: 400px;/* Set height large enough to allow scrolling */
-
-}
-
-.carousel_image_container{
-  min-width: 100%;
-   height: auto;
-}
-.carousel_image {
-  display: block; /* Remove any extra space around the image */
-  flex-direction: column;
-  width: 100%; /* Set desired maximum width */
- 
-  height: auto; /* Maintain aspect ratio */
-
-}
-.carousel_slide.active {
-  display: block; /* Show only active slide */
-}
-
-
-
-.gallery-sidebar {
-  display: flex;
-  padding-top: 16px;
+  display: inline-block;
+   width: 400px;
+   overflow-y: auto; 
+   height: 400px;
+  
+  }
+  
+  .carousel_image_container{
+    min-width: 100%;
+     height: auto;
+  }
+  .carousel_image {
+    display: block; 
+    flex-direction: column;
+    width: 100%; 
+    height: auto; 
+  
+  }
+  .carousel_slide.active {
+    display: block; 
+  }
+  /* RIGHT SIDE STYLES */
+.product-details {
+  padding-bottom: 10px;
+  padding-top: 50px;
+  width: 100%;
+  padding-left: 30px;
   flex-direction: column;
   justify-content: center;
-  flex: 1;
-  flex-basis: 0%;
+
 }
 
-.gallery-main {
+.product-type, .product-title, .product-description, .option-buttons, .option-container{
+  padding: 0.01em 16px;
+  padding-top: 0.01em;
+  padding-right: 16px;
+  padding-bottom: 0.01em;
+
+}
+
+.option-container{
+  justify-items: flex-start;
   display: flex;
-  min-width: 240px;
-  padding-top: 16px;
   flex-direction: column;
-  align-items: center;
-  color: #fff;
-  text-align: center;
-  justify-content: start;
-  width: 618px;
-  max-width: 618px;
-  font: 500 16px/1 Roboto, sans-serif;
+  width: 100%;
+
 }
-
-
 
 .product-info {
+  justify-items: flex-start;
   display: flex;
   flex-direction: column;
   width: 100%;
   padding-left: 20px;
   padding-top: 20px;
 }
-
-
 
 .product-title {
   margin-top: 4px;
@@ -166,7 +145,6 @@ display: inline-block;
   color: #121212;
   font: 700 32px/36px Dosis, sans-serif;
 }
-
 
 .product-options {
   display: flex;
@@ -179,73 +157,6 @@ display: inline-block;
 .product-type{
   align-items: start;
 }
-
-#product-type-image{
-  align-items: start;
-}
-
-#product-type-text{
-  text-align: left;
-}
-
-.option-container {
-  display: flex;
-  min-width: 240px;
-  width: 100%;;
-  flex-direction: column;
-  justify-content: start;
-  flex: 1;
-
-}
-
-
-.option-title {
-  text-align: center;
-  width: 100%;
-  color: rgba(0, 0, 0, 0.9);
-  letter-spacing: -0.05px;
-  font: 500 16px/1 Roboto, sans-serif;
-}
-
-.option-link{
-  text-decoration: none;
-  display: flex;
-}
-
-
-.tea-bag{
-  padding-top: 10px 
-}
-.option-buttons {
- align-items: center;
- padding: 5px;
- /* Add spacing between the buttons */
-}
-.option-button:hover {
-  background-color: #f0f0f0; /* Light gray background on hover */
-  border-color: #121212; /* Darker border on hover */
-  cursor: pointer;
-}
-
-.option-button, .option-button-selected {
-  border-radius: 4px;
-  border: 1px solid #c7c7c7;
-  background-color: #fff;
-  display: flex;
-  min-height: 40px;
-  width: 100%;
-
-  padding: 12px 44px;
-}
-
-.option-button-selected {
-  border: 1px solid #121212;
-  gap: 20px;
-  justify-content: space-between;
-  padding: 8px 5px 8px 44px;
-}
-
-
 
 
 .icon-container {
@@ -275,33 +186,73 @@ display: inline-block;
   width: 24px;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+#product-type-image{
+  align-items: start;
 }
 
-.product-image {
-  display: flex;
-  max-width: 100%; /* Set desired maximum width */
-  height: auto; /* Set desired maximum height */
- /* Maintain aspect ratio */
-  object-fit: contain; 
+#product-type-text{
+  text-align: left;
 }
 
 
-/* Cards carousel */
-/* Ensure the container uses Flexbox to align items side by side */
-
-
-.product-description{
+#product-description{
   width: 100%;
+  text-align: left;
+}
+
+.option-title{
+  text-align: center;
+  padding-bottom: 10px;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.9);
+  letter-spacing: -0.05px;
+  font: 500 16px/1 Roboto, sans-serif;
+}
+
+.option-link{
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.option-buttons{
+  display: flex;
+  width: 100%;
+  text-align: center;
+  flex-direction: row;
+}
+
+.tea-bag, .tea-book{
+  flex: 1;
+  width: 100%;
+  padding: 3px;
+    
+}
+
+.option-button:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
+  border-color: #121212; /* Darker border on hover */
+  cursor: pointer;
+}
+
+
+.option-button, .option-button-selected {
+  border-radius: 4px;
+  border: 1px solid #c7c7c7;
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  white-space: normal;
+  justify-content: center;
+  min-height: 40px;
+  padding: 12px 44px;
+}
+
+.option-button-selected {
+  border: 1px solid #121212;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 8px 5px 8px 44px;
 }
 
 
@@ -312,15 +263,19 @@ display: inline-block;
   /* Product info (first in order) */
 .row{
   display: inline-flex;
+  width: 100%;
+  min-height: fit-content;
+
 }
 
 .product-gallery{
-  padding-top: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
   /* Product gallery (second in order) */
   .product-details {
-    padding-top: 1px;
+    padding-top: 0%;
     padding-left: 1px;
     display: inline-block;
     order: 1; /* Moves the product gallery below product info */
@@ -330,7 +285,7 @@ display: inline-block;
 .product-info{
  display: flex;
  flex-wrap: wrap;
- padding: 1px 33px;
+ padding-top: 0;
 }
   /* Carousel container (third in order) */
   .carousel_container {
@@ -343,7 +298,6 @@ display: inline-block;
   .carousel{
     padding-left: 0;
     padding-top: 5px;
-    padding-bottom: 5px;
     height: 50%;
   }
 
@@ -364,8 +318,6 @@ display: inline-block;
     order: 1;
     flex-direction: row;
     justify-content: center;
-  
-   
   }
 
   #carousel-navigation{ 
@@ -377,27 +329,63 @@ display: inline-block;
   .navigation_image {
     width: 50px;
   }
-
   .product-title {
-    font-size: 20%;
-    margin: 10px 0;
+    padding: 2px 0;
+    font-size: 2em;
+    font-weight: 200;
+    line-height: 1.2; /* Adjust line height for better spacing */
+    color: rgba(0, 0, 0, 0.9) !important;
+    word-wrap: break-word; /* Ensure long words wrap properly */
+    overflow-wrap: break-word; /* Support for long words breaking */
+    white-space: normal; /* Allow text to wrap normally */
+    font-family: 'HelveticaNowTextMid'; /* Apply font-family correctly */
+  }
+  
+  
+  
+  @font-face {
+    font-family: 'HelveticaNowTextMid';
+    src: url(/fonts/helvetica-text/HelveticaNow-Text-Mid.ttf);
+  }
+  
+  .product-type, .product-title, .product-description, .option-title{
+    padding: 0.01em 16px;
+    padding-top: 0.01em;
+    padding-bottom: 0.01em;
   }
 
-  #product-title {
-    text-align: left;
-    font-size: 28px;
-    width: 100%; /* or a specific value if needed */
-    overflow-wrap: break-word; /* For older browser compatibility */
-    white-space: normal;
+  .option-buttons{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    flex-direction: row;
+  }
+
+  .tea-book, .tea-bag{
+    flex: 1;
+  width: 100%;
+  padding: 3px;
+    
+
+  }
+.option-link{
+  display: block;
+
 }
-
-
-  .option-buttons {
-    justify-content: center;
-    flex-direction: column;
-    width: 60%;
+  .option-button{
+    padding: 10px 4px 0 5px;
+    background-color: #fff;
+    border: 1px solid #c7c7c7;
+    border-radius: 4px;
+    min-height: 40px;
+    padding: 4px 8px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    margin: 0 !important;
   }
- 
+
 
   .product-description {
     margin: 10px 0;
@@ -413,6 +401,7 @@ display: inline-block;
   }
 
   .option-title {
+    text-align: left;
     white-space: normal;
     width: 100%;
     color: rgba(0, 0, 0, 0.9);
@@ -420,11 +409,11 @@ display: inline-block;
     font: 500 16px/1 Roboto, sans-serif;
   }
 
-  .option-button {
-    width: 100%;
-    flex-direction: row;
-    
-  }
+
+  
+  
+
+  
 }
 
 /* For tablets */
