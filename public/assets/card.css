@@ -355,6 +355,7 @@ body {
   }
 
   .option-buttons{
+    justify-items: flex-start;
     display: flex;
     width: 100%;
     text-align: center;
@@ -401,7 +402,7 @@ body {
   }
 
   .option-title {
-    text-align: left;
+    
     white-space: normal;
     width: 100%;
     color: rgba(0, 0, 0, 0.9);
