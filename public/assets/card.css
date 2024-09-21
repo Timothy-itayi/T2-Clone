@@ -19,6 +19,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
+  justify-content: space-evenly;
 }
 
 
@@ -43,6 +44,7 @@ body {
 .carousel_container {
   position: relative;
   display: flex;
+  justify-content: space-evenly;
  
  
 }
@@ -82,7 +84,7 @@ body {
 }
 
 .carousel {
-  padding-left: 10px;
+  padding-left: 50px;
  padding-top: 30px;
   height: 100%; /* Full viewport height */
   overflow: hidden; /* Hide overflow to only show the carousel */
@@ -91,29 +93,16 @@ body {
   scrollbar-width: thin; /* Firefox */
 }
 
-.carousel_slide {
-  flex-direction: column; /* Ensure slides are inline */
-  height: 10rem; /* Full height of carousel */
-  justify-content: center;
-  min-width: 100%;
-  padding-bottom: 15x;
-  box-sizing: border-box;
-  align-items: center; /* Center content vertically */
-  justify-content: center;
-  
-  scroll-behavior: smooth;
 
-}
 
 
 
 .carousel_slides {
 
 display: inline-block;
- gap: 20px;
- max-width: 500px;
+ width: 400px;
  overflow-y: auto; 
- height: 100%;/* Set height large enough to allow scrolling */
+ height: 400px;/* Set height large enough to allow scrolling */
 
 }
 
@@ -124,9 +113,8 @@ display: inline-block;
 .carousel_image {
   display: block; /* Remove any extra space around the image */
   flex-direction: column;
-  max-width: 100%; /* Set desired maximum width */
-  /* Set desired maximum height */
-  /* Maintain aspect ratio */
+  width: 100%; /* Set desired maximum width */
+ 
   height: auto; /* Maintain aspect ratio */
 
 }
@@ -163,11 +151,10 @@ display: inline-block;
 
 .product-info {
   display: flex;
-  min-width: 240px;
   flex-direction: column;
-  width: 612px;
-  max-width: 612px;
-  padding: 16px 80px 68px 33px;
+  width: 100%;
+  padding-left: 20px;
+  padding-top: 20px;
 }
 
 
@@ -204,14 +191,13 @@ display: inline-block;
 .option-container {
   display: flex;
   min-width: 240px;
-  width: 100%;
-  max-width: 480px;
+  width: 100%;;
   flex-direction: column;
   justify-content: start;
   flex: 1;
-  flex-basis: 0%;
-  padding: 0 15px;
+
 }
+
 
 .option-title {
   text-align: center;
@@ -226,9 +212,13 @@ display: inline-block;
   display: flex;
 }
 
+
+.tea-bag{
+  padding-top: 10px 
+}
 .option-buttons {
  align-items: center;
-
+ padding: 5px;
  /* Add spacing between the buttons */
 }
 .option-button:hover {
@@ -310,18 +300,6 @@ display: inline-block;
 /* Ensure the container uses Flexbox to align items side by side */
 
 
-
-
-
-
-
-
-.product-info {
-width: 100%; /* Adjust the minimum width as needed */
-}
-
-
-
 .product-description{
   width: 100%;
 }
@@ -335,35 +313,50 @@ width: 100%; /* Adjust the minimum width as needed */
 .row{
   display: inline-flex;
 }
+
+.product-gallery{
+  padding-top: 3px;
+}
+
   /* Product gallery (second in order) */
   .product-details {
+    padding-top: 1px;
+    padding-left: 1px;
+    display: inline-block;
     order: 1; /* Moves the product gallery below product info */
     width: 100%;
-    padding: 20px 0;
-    margin: 10%;
+  
   }
-
+.product-info{
+ display: flex;
+ flex-wrap: wrap;
+ padding: 1px 33px;
+}
   /* Carousel container (third in order) */
   .carousel_container {
     order: 0; /* Moves carousel to the bottom */
     flex-direction: column;
     align-items: center;
+
+  }
+
+  .carousel{
+    padding-left: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 50%;
   }
 
   .carousel_image {
     display: block; /* Remove any extra space around the image */
-   
-  min-width: 200px;
-  min-height: 200px;
-    max-width: 100%; /* Set desired maximum width */
-    /* Set desired maximum height */
-    /* Maintain aspect ratio */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; /* Set desired maximum width */
+    height: 100px; /* Maintain aspect ratio */
   
   }
 
   .carousel_slides {
-    width: 100%;
+     max-height: 400px;
+     overflow-y: hidden;
   }
 
   .carousel_navigation {
@@ -371,12 +364,14 @@ width: 100%; /* Adjust the minimum width as needed */
     order: 1;
     flex-direction: row;
     justify-content: center;
-    gap: 10px;
-    padding-top: 10px;
+  
+   
   }
 
   #carousel-navigation{ 
     flex-direction: row ;
+    padding-top: 0;
+    padding-left: 0;
   }
 
   .navigation_image {
@@ -444,18 +439,11 @@ width: 100%; /* Adjust the minimum width as needed */
   /* Product gallery (second in order) */
   .product-gallery {/* Moves the product gallery below product info */
     width: 100%;
-    padding: 20px 0;
+    padding-top: 3px;
     flex-shrink: 0;
   }
 
-  .product-details {
-    /* Adjust the minimum width as needed */
-    padding-bottom: 10px;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-  
-  }
+
  
   /* Carousel container (third in order) */
   .carousel_container {
@@ -464,15 +452,11 @@ width: 100%; /* Adjust the minimum width as needed */
     align-items: center;
   }
 
-  .carousel_slides {
-    width: 100%;
-  }
+
   .carousel_image {
     display: block; /* Remove any extra space around the image */
     flex-direction: column;
-  min-width: 200px;
-  min-height: 200px;
-    max-width: 100%; /* Set desired maximum width */
+    width: 100%; /* Set desired maximum width */
     /* Set desired maximum height */
     /* Maintain aspect ratio */
     height: auto; /* Maintain aspect ratio */
@@ -483,18 +467,14 @@ width: 100%; /* Adjust the minimum width as needed */
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 15px;
-    padding-top: 10px;
+   
   }
 
   #carousel-navigation{
     flex-direction: row;
   }
 
-  .product-title {
-    font-size: 28px;
-    margin: 15px 0;
-  }
+
 
 }
 
