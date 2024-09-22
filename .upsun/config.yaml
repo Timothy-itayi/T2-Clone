@@ -3,13 +3,12 @@ applications:
     # The language and version for your app.
     type: 'nodejs:20'
 
-  source:
-       root: "/"
+ 
     # The app's configuration when it's exposed to the web.
   web:
       commands:
         # A minimal start command, since it's required.
-         start: sleep infinity 
+        start: "echo 'Static site deployment'"  
       locations:
         '/':
           # Serve from the root directory of your project.
@@ -21,10 +20,7 @@ applications:
           # Allow files even without specified rules.
           allow: true
           
-          expires: 24h
-          rules:
-                 \.(css|js|gif|jpe?g|png|svg)$:
-                  expires: 4w
+        
 
 
 routes:
