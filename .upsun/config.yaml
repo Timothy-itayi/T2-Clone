@@ -5,10 +5,12 @@ applications:
 
     # The app's configuration when it's exposed to the web.
     web:
-      commands: {}  # Define an empty commands object
+      commands:
+        # A minimal start command, since it's required.
+        start: "echo 'Static site deployment'"  
       locations:
         '/':
-          # Use an empty string for root to refer to the application root directly
+          # Serve from the root directory of your project.
           root: ''
           # Forward resources to the app.
           passthru: true
