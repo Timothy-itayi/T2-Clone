@@ -13,7 +13,7 @@ applications:
       locations:
         "/":
           # Static files will be served from the root directory.
-          root: "."
+          root: "/index.html"
           # Set the default file to serve.
           index:
             - index.html
