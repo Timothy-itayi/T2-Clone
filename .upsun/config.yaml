@@ -5,13 +5,11 @@ applications:
 
     # The app's configuration when it's exposed to the web.
     web:
-      commands:
-        # No need for a start command since it's a static site.
-        # start: npm start  # Commented out or removed
+      commands: {}  # Define an empty commands object
       locations:
         '/':
-          # The public directory relative to the app root.
-          root: ''  # Assuming your static files are in the root directory
+          # Use an empty string for root to refer to the application root directly
+          root: ''
           # Forward resources to the app.
           passthru: true
           # What files to use when serving a directory.
