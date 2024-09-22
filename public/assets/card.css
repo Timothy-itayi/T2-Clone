@@ -265,6 +265,7 @@ body {
   display: inline-flex;
   width: 100%;
   min-height: fit-content;
+  
 
 }
 
@@ -434,6 +435,9 @@ body {
   }
 
 
+
+
+  
  
   /* Carousel container (third in order) */
   .carousel_container {
@@ -453,18 +457,31 @@ body {
   
   }
 
-  .carousel_navigation {
+  /* .carousel_navigation {
+    
     display: flex;
+    order: 1;
     flex-direction: row;
     justify-content: center;
-   
+  } */
+
+  #carousel-navigation{ 
+    flex-wrap: wrap;
+    flex-direction: row ;
+    padding-top: 0;
+    padding-left: 0;
+    justify-content: center;
   }
 
-  #carousel-navigation{
-    flex-direction: row;
-  }
 
+.product-details, .product-info, .carousel{
+  padding-top: 0;
 
+}
+
+.product-details{
+  padding-left: 20px;
+}
 
 }
 
