@@ -14,7 +14,7 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
   />
-
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -81,13 +81,9 @@
       
         </header>
     
-        
-        <section class="product-details">
-          <section class="carousel">
-
-            <div class="carousel_container">
-        
-          
+        <section class="row">
+        <section class="product-gallery">
+            <div class="carousel_container">       
         <ul class="carousel_navigation" id="carousel-navigation">
           <li><a href="#slide_1">
               <img 
@@ -194,27 +190,31 @@
         
   
       
-            <div class="product-gallery">
+            <section class="product-details">
           
          
              
 
-            <div class="product-info">
+            <div class="product-info" id="product-info">
               <div class="product-type">
                 <img id="product-type-image"src="https://cdn.builder.io/api/v1/image/assets/TEMP/e2a624924eda7768ca2591411ecda032cbf0ca624a068caca5cec65c359c8377?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
                 <span id="product-type-text">Loose Leaf</span>
               </div>
           
               <h1 id="product-title"class="product-title">T2 x Penguin Books - Charles Dickens’ Baked Apples Loose Leaf Tea Book 100g</h1>
-              <p id="product-description"class="product-description">Add the bright and bountiful tastes of apples to your day, like Charles Dickens would have, with this black tea.</p>
+              <p id="product-description"class="w3-container">Add the bright and bountiful tastes of apples to your day, like Charles Dickens would have, with this black tea.</p>
+            <div class="option-container">
               <h2 class="option-title">Choose a format</h2>
               <div class="option-buttons">
+                <div class="tea-book">
                 <a href="/files/tea-book.html" class="option-link">
                 <button class="option-button">
                   <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e2a624924eda7768ca2591411ecda032cbf0ca624a068caca5cec65c359c8377?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true">
-                 Loose leaf            
+                 Tea Book            
                 </button>
               </a>
+                </div>
+                <div class="tea-bag">
               <a href="/files/card.html" class="option-link">
                 <button  class="option-button">
                   <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a1c538977a215ffbafe067a01f71a829fc2c3be06ba1fea4bb91facb172b9673?placeholderIfAbsent=true&apiKey=32a425db04fb41a99abdd773c723f591" alt="" aria-hidden="true" >
@@ -222,11 +222,12 @@
                 </button>
               </a>
               </div>
-             
+              </div>
+            </div>
                 </div>
               </div>
             </div>
-         
+            </section>
         </section>
         <script src="/js/main.js"
         
@@ -237,7 +238,7 @@
         </script>
 </body>
   
-<footer class="footer" >
+<!-- <footer class="footer" >
     <div class="footer-container" >
    
         <div class="logo-wrapper">
@@ -255,6 +256,6 @@
       </p>
     </div>
     </div>
-  </footer>
+  </footer> -->
   
 </html>

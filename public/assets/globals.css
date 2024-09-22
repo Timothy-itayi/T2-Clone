@@ -602,7 +602,7 @@ body {
 
 .product-image {
   
-  display: block;
+  display: flex;
  position: relative;
   width: 100%;
   height: auto
@@ -818,36 +818,42 @@ body {
 
 @media (max-width: 1200px) {
   .tea-product-card {
-    max-width: 250px; /* Adjust for medium-sized screens */
+    display: flex;
+    flex-grow: 1;/* Adjust for medium-sized screens */
   }
 }
 
 @media (max-width: 768px) {
   .tea-product-card {
-    max-width: 200px; /* Adjust for small screens */
+    display: flex;
+    flex-grow: 1;/* Adjust for medium-sized screens */
   }
 }
 
 @media (max-width: 480px) {
   .tea-product-card {
-    max-width: 150px; /* Adjust for very small screens */
+    display: flex;
+    flex-grow: 1;/* Adjust for medium-sized screens */
   }
 }/* Responsive Styles for Smaller Screens */
 @media (max-width: 1200px) {
   .tea-product-card {
-    max-width: 250px; /* Adjust for medium-sized screens */
+    display: flex;
+    flex-grow: 1;/* Adjust for medium-sized screens */
   }
 }
 
 @media (max-width: 768px) {
   .tea-product-card {
-    max-width: 200px; /* Adjust for small screens */
+    display: flex;
+    flex-grow: 1;/* Adjust for medium-sized screens */
   }
 }
 
 @media (max-width: 480px) {
   .tea-product-card {
-    max-width: 150px; /* Adjust for very small screens */
+    display: flex;
+    flex-grow: 1;/* Adjust for medium-sized screens */
   }
 }
 /* Footer styles */
@@ -984,4 +990,3 @@ body {
   white-space: nowrap;
   border: 0;
 }
-
