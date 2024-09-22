@@ -11,7 +11,7 @@ applications:
       locations:
         '/':
           # The public directory relative to the app root.
-          root: 'index.html'  # Assuming your static files are in the root directory
+          root: '.'  # Assuming your static files are in the root directory
           # Forward resources to the app.
           passthru: true
           # What files to use when serving a directory.
