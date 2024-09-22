@@ -3,33 +3,29 @@ applications:
     # The language and version for your app.
     type: 'nodejs:20'
 
- 
-    # The app's configuration when it's exposed to the web.
   web:
-      commands:
-        # A minimal start command, since it's required.
-        start: "echo 'Static site deployment'"  
-      locations:
-        '/':
-          # Serve from the root directory of your project.
-          root: 'public'
-          # Forward resources to the app.
-          passthru: true
-          # What files to use when serving a directory.
-          index: ["index.html"]
-          # Allow files even without specified rules.
-          allow: true
-          '/assets':
-      root: 'public/assets'
-      allow: true
+    commands:
+      # A minimal start command, since it's required.
+      start: "echo 'Static site deployment'"
+    locations:
+      '/':
+        # Serve from the root directory of your project.
+        root: 'public'
+        # Forward resources to the app.
+        passthru: true
+        # What files to use when serving a directory.
+        index: ["index.html"]
+        # Allow files even without specified rules.
+        allow: true
+      '/assets':
+        root: 'public/assets'
+        allow: true
       '/fonts':
-      root: 'public/fonts'
-      allow: true
+        root: 'public/fonts'
+        allow: true
       '/js':
-      root: 'public/js'
-      allow: true
-        
-
+        root: 'public/js'
+        allow: true
 
 routes:
   "https://{default}/":
