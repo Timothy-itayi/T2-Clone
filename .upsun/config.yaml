@@ -1,26 +1,24 @@
 applications:
   t2clone:
-    # Application source code directory
-    source:
-      root: "/"
+    # The language and version for your app.
+    type: 'nodejs:20'
 
-    # Even though you're using static files, Upsun might still require a runtime type.
-    # "nodejs:20" works fine for your static site, though it's not actively used for serving files.
-    type: "nodejs:20"
-
+    # The app's configuration when it's exposed to the web.
     web:
-      # Remove the start command since you're serving static files, not running a server.
+      commands:
+        # No need for a start command since it's a static site.
+        # start: npm start  # Commented out or removed
       locations:
-        "/":
-          # Static files will be served from the root directory.
-          root: "index.html"
-          # Set the default file to serve.
-          index:
-            - index.html
+        '/':
+          # The public directory relative to the app root.
+          root: 'index.html'  # Assuming your static files are in the root directory
+          # Forward resources to the app.
+          passthru: true
+          # What files to use when serving a directory.
+          index: ["index.html"]
+          # Allow files even without specified rules.
+          allow: true
 
-    # Remove unnecessary hooks, commands, and workers since you're not running a dynamic app.
-
-# The routes of the project.
 routes:
   "https://{default}/":
     type: upstream
