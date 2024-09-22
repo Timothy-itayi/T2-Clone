@@ -19,7 +19,15 @@ applications:
           index: ["index.html"]
           # Allow files even without specified rules.
           allow: true
-          
+          '/assets':
+      root: 'public/assets'
+      allow: true
+      '/fonts':
+      root: 'public/fonts'
+      allow: true
+      '/js':
+      root: 'public/js'
+      allow: true
         
 
 
