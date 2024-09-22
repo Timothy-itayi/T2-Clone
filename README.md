@@ -29,11 +29,14 @@ This project is a front-end clone of the T2 Tea website, built to closely mimic 
 
 ## Technologies Used
 
-- **Frontend:** Figma, HTML, CSS, JavaScript
-- **UI Libraries:** TBD
-- **Tools:** TBD
+- **Frontend:**  HTML, CSS, JavaScript
+- **UI Libraries:** W3Schools 
+- **Tools:** Figma, Javascript
 
 ## Progress and Productivity Improvements
 
-After three days of working on the project, I was able to significantly improve my productivity by incorporating Figma into my workflow. Using Figma allowed me to better visualize and identify areas of the website that needed fixing, making the cloning process more efficient.
+
+After 3 days of working on the project, I significantly improved my productivity by incorporating Figma into my workflow. Figma helped structure the plan for the T2 website, using a plugin to assist with the development of the website challenge. This allowed me to better visualize and identify areas of the website needing improvements, streamlining the cloning process.
+
+I also used W3Schools to clarify certain aspects of CSS and incorporated some JavaScript for enhanced functionality, such as managing the side navigation bar and the carousel navigation on the product page.
 
