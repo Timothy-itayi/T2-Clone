@@ -1,30 +1,28 @@
 applications:
-  t2clone:
-    type: 'nodejs:20'
-
-  web:
-    operations:
-      start: "echo 'Static site deployment'"
-    locations:
-      '/':
-        root: 'public'
-        passthru: true
-        index: ["index.html"]
-        allow: true
-      '/assets':
-        root: 'public/assets'
-        allow: true
-      '/fonts':
-        root: 'public/fonts'
-        allow: true
-      '/js':
-        root: 'public/js'
-        allow: true
+  app:
+    type: "nodejs:20"
+    source:
+      root: "/"
+    web:
+      locations:
+        /:
+          root: "public"
+          index:
+            - index.html
+        /assets:
+          root: "public/assets"
+          allow: true
+        /fonts:
+          root: "public/fonts"
+          allow: true
+        /js:
+          root: "public/js"
+          allow: true
 
 routes:
   "https://{default}/":
     type: upstream
-    upstream: "t2clone:http"
+    upstream: "app:http"
 
   "https://www.{default}":
     type: redirect
