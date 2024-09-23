@@ -1,17 +1,14 @@
-// netlify/functions/api.js
 const express = require('express');
-const path = require('path');
 const serverless = require('serverless-http');
+const path = require('path');
 
 const app = express();
 
-// Set static folder
-app.use(express.static(path.join(__dirname, '../../public')));
-app.use('/files', express.static(path.join(__dirname, '../../files')));
+// Static files middleware
+app.use(express.static(path.join(__dirname, '../public')));
 
-// Home Route
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../index.html'));
+  res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 module.exports.handler = serverless(app);
