@@ -4,6 +4,8 @@
   "description": "Cloning Aspects of T2 Tea Website - Home, Products , Product Detail T2 Tea Website Clone Project Overview This project is a front-end clone of the T2 Tea website, built to closely mimic the design and functionality of the original site. The goal is to recreate the website's appearance and user experience as accurately as possible, with a focus on responsive design and component reusability.",
   "main": "index.js",
   "scripts": {
+    "build": "npm run build",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
