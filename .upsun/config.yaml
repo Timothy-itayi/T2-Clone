@@ -1,21 +1,15 @@
 applications:
   t2clone:
-    # The language and version for your app.
     type: 'nodejs:20'
 
   web:
-    commands:
-      # A minimal start command, since it's required.
+    operations:
       start: "echo 'Static site deployment'"
     locations:
       '/':
-        # Serve from the root directory of your project.
         root: 'public'
-        # Forward resources to the app.
         passthru: true
-        # What files to use when serving a directory.
         index: ["index.html"]
-        # Allow files even without specified rules.
         allow: true
       '/assets':
         root: 'public/assets'
